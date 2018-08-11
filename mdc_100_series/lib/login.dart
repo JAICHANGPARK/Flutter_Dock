@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import 'package:Shrine/colors.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -41,24 +42,42 @@ class _LoginPageState extends State<LoginPage> {
             ),
             SizedBox(height: 120.0),
             // TODO: Wrap Username with PrimaryColorOverride (103)
+            PrimaryColorOverride(
+              color: kShrineBrown900,
+              child: TextField(
+                controller: _usernameController,
+                decoration: InputDecoration(
+                  labelText: 'Username',
+                ),
+              ),
+            ),
             // TODO: Remove filled: true values (103)
             // TODO: Wrap Password with PrimaryColorOverride (103)
             // TODO: Add TextField widgets (101)
-            TextField(
-              controller: _usernameController,
-              decoration: InputDecoration(
-                filled: true,
-                labelText: 'Username',
-              ),
-            ),
+//            TextField(
+//              controller: _usernameController,
+//              decoration: InputDecoration(
+//                //filled: true,
+//                labelText: 'Username',
+//              ),
+//            ),
             SizedBox(height: 12.0,),
-            TextField(
-              controller: _passwordController,
-              decoration: InputDecoration(
-                filled: true,
-                labelText: 'Password',
+//            TextField(
+//              controller: _passwordController,
+//              decoration: InputDecoration(
+//                //filled: true,
+//                labelText: 'Password',
+//              ),
+//              obscureText: true,
+//            ),
+            PrimaryColorOverride(
+              color: kShrineBrown900,
+              child: TextField(
+                controller: _passwordController,
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                ),
               ),
-              obscureText: true,
             ),
             // TODO: Add button bar (101)
             ButtonBar(
@@ -72,6 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                   },
                 ),
                 RaisedButton(
+                  elevation: 8.0,
                   child: Text('Next'),
                   onPressed: (){
                     Navigator.pop(context);
@@ -87,3 +107,19 @@ class _LoginPageState extends State<LoginPage> {
 }
 
 // TODO: Add PrimaryColorOverride (103)
+class PrimaryColorOverride extends StatelessWidget{
+  const PrimaryColorOverride({Key key, this.color, this.child}): super(key:key);
+
+  final Color color;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Theme(
+      child: child,
+      data: Theme.of(context).copyWith(primaryColor: color),
+    );
+  }
+
+}

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import 'package:Shrine/colors.dart';
 import 'package:flutter/material.dart';
 
 import 'home.dart';
@@ -31,6 +32,7 @@ class ShrineApp extends StatelessWidget {
       // TODO: Change backLayer field value to CategoryMenuPage (104)
       initialRoute: '/login',
       onGenerateRoute: _getRoute,
+      theme: _kShrineTheme,
       // TODO: Add a theme (103)
     );
   }
@@ -49,4 +51,48 @@ class ShrineApp extends StatelessWidget {
 }
 
 // TODO: Build a Shrine Theme (103)
+final ThemeData _kShrineTheme = _buildShrineTheme();
+
+ThemeData _buildShrineTheme() {
+  final ThemeData base = ThemeData.light();
+  return base.copyWith(
+    accentColor: kShrineBrown900,
+    primaryColor: kShrinePink100,
+    buttonColor: kShrinePink100,
+    scaffoldBackgroundColor: kShrineBackgroundWhite,
+    cardColor: kShrineBackgroundWhite,
+    textSelectionColor: kShrinePink100,
+    errorColor: kShrineErrorRed,
+    // TODO: Add the text themes (103)
+    textTheme: _buildShrineTextTheme(base.textTheme),
+    primaryTextTheme: _buildShrineTextTheme(base.primaryTextTheme),
+    accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
+    // TODO: Add the icon themes (103)
+    primaryIconTheme: base.iconTheme.copyWith(
+      color: kShrineBrown900
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(),
+    )
+    // TODO: Decorate the inputs (103)
+  );
+}
 // TODO: Build a Shrine Text Theme (103)
+TextTheme _buildShrineTextTheme(TextTheme base) {
+  return base.copyWith(
+    headline: base.headline.copyWith(
+      fontWeight: FontWeight.w500,
+    ),
+    title: base.title.copyWith(
+        fontSize: 18.0
+    ),
+    caption: base.caption.copyWith(
+      fontWeight: FontWeight.w400,
+      fontSize: 14.0,
+    ),
+  ).apply(
+    fontFamily: 'Rubik',
+    displayColor: kShrineBrown900,
+    bodyColor: kShrineBrown900,
+  );
+}
