@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import 'package:Shrine/colors.dart';
+import 'package:Shrine/supplemental/cut_corners_border.dart';
 import 'package:flutter/material.dart';
 
 import 'home.dart';
@@ -20,7 +21,7 @@ import 'login.dart';
 
 // TODO: Convert ShrineApp to stateful widget (104)
 class ShrineApp extends StatelessWidget {
-  
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -56,25 +57,29 @@ final ThemeData _kShrineTheme = _buildShrineTheme();
 ThemeData _buildShrineTheme() {
   final ThemeData base = ThemeData.light();
   return base.copyWith(
-    accentColor: kShrineBrown900,
-    primaryColor: kShrinePink100,
-    buttonColor: kShrinePink100,
-    scaffoldBackgroundColor: kShrineBackgroundWhite,
-    cardColor: kShrineBackgroundWhite,
-    textSelectionColor: kShrinePink100,
-    errorColor: kShrineErrorRed,
-    // TODO: Add the text themes (103)
-    textTheme: _buildShrineTextTheme(base.textTheme),
-    primaryTextTheme: _buildShrineTextTheme(base.primaryTextTheme),
-    accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
-    // TODO: Add the icon themes (103)
-    primaryIconTheme: base.iconTheme.copyWith(
-      color: kShrineBrown900
-    ),
-    inputDecorationTheme: InputDecorationTheme(
-      border: OutlineInputBorder(),
-    )
+      accentColor: kShrineBrown900,
+      primaryColor: kShrinePink100,
+      buttonColor: kShrinePink100,
+      scaffoldBackgroundColor: kShrineBackgroundWhite,
+      cardColor: kShrineBackgroundWhite,
+      textSelectionColor: kShrinePink100,
+      errorColor: kShrineErrorRed,
+      // TODO: Add the text themes (103)
+      textTheme: _buildShrineTextTheme(base.textTheme),
+      primaryTextTheme: _buildShrineTextTheme(base.primaryTextTheme),
+      accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
+      // TODO: Add the icon themes (103)
+      primaryIconTheme: base.iconTheme.copyWith(
+          color: kShrineBrown900
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        border: CutCornersBorder(),
+      )
+//    inputDecorationTheme: InputDecorationTheme(
+//      border: OutlineInputBorder(),
+//    ),
     // TODO: Decorate the inputs (103)
+
   );
 }
 // TODO: Build a Shrine Text Theme (103)

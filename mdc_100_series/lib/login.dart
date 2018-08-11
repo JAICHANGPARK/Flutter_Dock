@@ -89,10 +89,18 @@ class _LoginPageState extends State<LoginPage> {
                     _passwordController.clear();
 
                   },
+                  shape: BeveledRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                        Radius.circular(7.0)),
+                  ),
                 ),
                 RaisedButton(
                   elevation: 8.0,
                   child: Text('Next'),
+                  shape: BeveledRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                        Radius.circular(7.0)),
+                  ),
                   onPressed: (){
                     Navigator.pop(context);
                   },
