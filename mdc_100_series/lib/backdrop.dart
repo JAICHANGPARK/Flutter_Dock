@@ -61,7 +61,18 @@ class _BackdropState extends State<Backdrop> with SingleTickerProviderStateMixin
     super.dispose();
   }
 
-  // TODO: Add functions to get and change front layer visibility (104)
+  @override
+  void didUpdateWidget(Backdrop oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.currentCategory != oldWidget.currentCategory) {
+      _toggleBackdropLayerVisibility();
+    } else if (!_frontLayerVisible) {
+      _controller.fling(velocity: _kFlingVelocity);
+    }
+  } // TODO: Add functions to get and change front layer visibility (104)
+
+
+
 
   bool get  _frontLayerVisible {
     final AnimationStatus status = _controller.status;
@@ -97,6 +108,8 @@ class _BackdropState extends State<Backdrop> with SingleTickerProviderStateMixin
           rect: layerAnimation,
           child: _FrontLayer(
             // TODO: Implement onTap property on _BackdropState (104)
+
+            onTap: _toggleBackdropLayerVisibility,
             child: widget.frontLayer,
           ),
         ),
@@ -170,10 +183,12 @@ class _FrontLayer extends StatelessWidget {
   // TODO: Add on-tap callback (104)
   const _FrontLayer({
     Key key,
+    this.onTap, // New code
     this.child,
   }) : super(key: key);
 
   final Widget child;
+  final VoidCallback onTap; // New code
 
   @override
   Widget build(BuildContext context) {
@@ -186,6 +201,17 @@ class _FrontLayer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           // TODO: Add a GestureDetector (104)
+
+          GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: onTap,
+            child: Container(
+              height: 40.0,
+              alignment: AlignmentDirectional.centerStart,
+            ),
+          ),
+
+
           Expanded(
             child: child,
           ),
