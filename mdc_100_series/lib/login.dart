@@ -35,7 +35,10 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 80.0),
             Column(
               children: <Widget>[
-                Image.asset('assets/diamond.png'),
+                Image.asset(
+                  'assets/diamond.png',
+                  color: kShrineBackgroundWhite, // New code
+                ),
                 SizedBox(height: 16.0),
                 Text('SHRINE'),
               ],
@@ -43,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 120.0),
             // TODO: Wrap Username with PrimaryColorOverride (103)
             PrimaryColorOverride(
-              color: kShrineBrown900,
+              color: kShrineAltYellow,
               child: TextField(
                 controller: _usernameController,
                 decoration: InputDecoration(
@@ -71,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
 //              obscureText: true,
 //            ),
             PrimaryColorOverride(
-              color: kShrineBrown900,
+              color: kShrineAltYellow,
               child: TextField(
                 controller: _passwordController,
                 decoration: InputDecoration(

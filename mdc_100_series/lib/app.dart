@@ -13,11 +13,13 @@
 // limitations under the License.
 
 import 'package:Shrine/colors.dart';
+import 'package:Shrine/model/product.dart';
 import 'package:Shrine/supplemental/cut_corners_border.dart';
 import 'package:flutter/material.dart';
 
 import 'home.dart';
 import 'login.dart';
+import 'backdrop.dart';
 
 // TODO: Convert ShrineApp to stateful widget (104)
 class ShrineApp extends StatelessWidget {
@@ -27,7 +29,14 @@ class ShrineApp extends StatelessWidget {
     return MaterialApp(
       title: 'Shrine',
       // TODO: Change home: to a Backdrop with a HomePage frontLayer (104)
-      home: HomePage(),
+//      home: HomePage(),
+    home: Backdrop(
+      currentCategory: Category.all,
+      frontLayer: HomePage(),
+      backLayer: Container(color: kShrinePink100,),
+      frontTitle: Text('Shrine'),
+      backTitle: Text('Menu'),
+    ),
       // TODO: Make currentCategory field take _currentCategory (104)
       // TODO: Pass _currentCategory for frontLayer (104)
       // TODO: Change backLayer field value to CategoryMenuPage (104)
@@ -101,3 +110,44 @@ TextTheme _buildShrineTextTheme(TextTheme base) {
     bodyColor: kShrineBrown900,
   );
 }
+
+//ThemeData _buildShrineTheme() {
+//  final ThemeData base = ThemeData.dark();
+//  return base.copyWith(
+//    accentColor: kShrineAltDarkGrey,
+//    primaryColor: kShrineAltDarkGrey,
+//    buttonColor: kShrineAltYellow,
+//    scaffoldBackgroundColor: kShrineAltDarkGrey,
+//    cardColor: kShrineAltDarkGrey,
+//    textSelectionColor: kShrinePink100,
+//    errorColor: kShrineErrorRed,
+//    textTheme: _buildShrineTextTheme(base.textTheme),
+//    primaryTextTheme: _buildShrineTextTheme(base.primaryTextTheme),
+//    accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
+//    primaryIconTheme: base.iconTheme.copyWith(
+//        color: kShrineAltYellow
+//    ),
+//    inputDecorationTheme: InputDecorationTheme(
+//      border: CutCornersBorder(),
+//    ),
+//  );
+//}
+//
+//TextTheme _buildShrineTextTheme(TextTheme base) {
+//  return base.copyWith(
+//    headline: base.headline.copyWith(
+//      fontWeight: FontWeight.w500,
+//    ),
+//    title: base.title.copyWith(
+//        fontSize: 18.0
+//    ),
+//    caption: base.caption.copyWith(
+//      fontWeight: FontWeight.w400,
+//      fontSize: 14.0,
+//    ),
+//  ).apply(
+//    fontFamily: 'Rubik',
+//    displayColor: kShrineSurfaceWhite,
+//    bodyColor: kShrineSurfaceWhite,
+//  );
+//}

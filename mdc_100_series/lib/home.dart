@@ -27,43 +27,45 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: Return an AsymmetricView (104)
+    return AsymmetricView(products: getProducts(Category.all),);
     // TODO: Pass Category variable to AsymmetricView (104)
-    return Scaffold(
-      // TODO: Add app bar (102)
-      appBar: AppBar(
-        title: Text('SHRINE'),
-        leading: IconButton(
-          icon: Icon(
-            Icons.menu,
-            semanticLabel: 'menu',
-          ),
-          onPressed: () {
-            print('Menu Button Pressed');
-          },
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.search,
-              semanticLabel: 'search',
-            ),
-            onPressed: () {
-              print('Search Button');
-            },
-          ),
-          IconButton(
-            icon: Icon(
-              Icons.tune,
-              semanticLabel: 'filter',
-            ),
-            onPressed: () {
-              print('Filter Clicked');
-            },
-          )
-        ],
-      ),
-
-      body: AsymmetricView(products: getProducts(Category.all)),
+//    return Scaffold(
+//      // TODO: Add app bar (102)
+//      appBar: AppBar(
+//        title: Text('SHRINE'),
+//        brightness: Brightness.dark,
+//        leading: IconButton(
+//          icon: Icon(
+//            Icons.menu,
+//            semanticLabel: 'menu',
+//          ),
+//          onPressed: () {
+//            print('Menu Button Pressed');
+//          },
+//        ),
+//        actions: <Widget>[
+//          IconButton(
+//            icon: Icon(
+//              Icons.search,
+//              semanticLabel: 'search',
+//            ),
+//            onPressed: () {
+//              print('Search Button');
+//            },
+//          ),
+//          IconButton(
+//            icon: Icon(
+//              Icons.tune,
+//              semanticLabel: 'filter',
+//            ),
+//            onPressed: () {
+//              print('Filter Clicked');
+//            },
+//          )
+//        ],
+//      ),
+//
+//      body: AsymmetricView(products: getProducts(Category.all)),
 //      body: GridView.count(
 //        crossAxisCount: 2,
 //        padding: EdgeInsets.all(16.0),
@@ -101,7 +103,7 @@ class HomePage extends StatelessWidget {
 //      body: Center(
 //        child: Text('You did it!'),
 //      ),
-    );
+//    );
   }
 }
 
