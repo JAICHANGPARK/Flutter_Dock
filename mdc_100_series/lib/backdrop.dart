@@ -10,6 +10,7 @@ const double _kFlingVelocity = 2.0;
 class Backdrop extends StatefulWidget {
   final Category currentCategory;
   final Widget frontLayer;
+
   final Widget backLayer;
   final Widget frontTitle;
   final Widget backTitle;
