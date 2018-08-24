@@ -5,8 +5,7 @@ class Phase2 extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
 
-    return MaterialApp(title: 'My App Hello world',
-        home: ClickMyApp());
+    return MaterialApp(title: 'My App Hello world', home: ClickMyApp());
   }
 }
 
@@ -17,6 +16,8 @@ class ClickMyApp extends StatefulWidget {
 
 class ChangeText extends State<ClickMyApp> {
   String defaultText = 'Hello ! Click me to change content';
+  final myController = TextEditingController();
+  final myGlobalController = GlobalKey<FormState>();
 
   int i = 0;
 
@@ -33,8 +34,6 @@ class ChangeText extends State<ClickMyApp> {
     });
   }
 
-  final myController = TextEditingController();
-
   @override
   void dispose() {
     // TODO: implement dispose
@@ -42,11 +41,16 @@ class ChangeText extends State<ClickMyApp> {
     super.dispose();
   }
 
-  void sayHello(){
-    showDialog(context: context, builder: (context){
-      return AlertDialog(content:
-      Text('Hello ' + myController.text),);
-    });
+  void sayHello() {
+    if (myGlobalController.currentState.validate()) {
+      showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              content: Text('Hello ' + myController.text),
+            );
+          });
+    }
   }
 
   @override
@@ -54,11 +58,26 @@ class ChangeText extends State<ClickMyApp> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(title: Text('Flutter App')),
-      body: TextField(
-        controller: myController,
-          decoration: InputDecoration(
-            hintText: 'Enter your name'
-          ),
+      body: Form(
+        key: myGlobalController,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            TextFormField(
+              validator: (value) {
+                if (value.isEmpty) return "Please enter yout name";
+              },
+              controller: myController,
+              decoration: InputDecoration(hintText: 'Enter your name '),
+            ),
+            Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                child: RaisedButton(
+                  onPressed: sayHello,
+                  child: Text('Say hi'),
+                ))
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: sayHello,
@@ -68,4 +87,3 @@ class ChangeText extends State<ClickMyApp> {
     );
   }
 }
-
