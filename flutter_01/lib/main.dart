@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_01/phase2.dart';
 import 'package:flutter_01/simplecalculator.dart';
 
-void main() => runApp(new MyCalculatorApp());
+import 'package:flutter_01/activit_one.dart';
+import 'package:flutter_01/activity_interface_0.dart';
+
+
+
+void main() => runApp(
+  MaterialApp(
+    home: new FirstScreenTwo(),
+  )
+);
 
 class MyApp extends StatelessWidget {
   @override
