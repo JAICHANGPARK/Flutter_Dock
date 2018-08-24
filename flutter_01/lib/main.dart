@@ -10,13 +10,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'My App Hello world',
         home: Scaffold(
-            appBar: AppBar(
-                title: Text('Flutter App')
-            ),
+          appBar: AppBar(title: Text('Flutter App')),
           body: Center(
-            child: Text('Hello world'),
+            child: new Text(
+              'Hello world',
+              style: new TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
+              ),
+            ),
           ),
-        )
-    );
+        ));
   }
 }
