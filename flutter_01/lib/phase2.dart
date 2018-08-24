@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_01/phase2.dart';
 
-void main() => runApp(new Phase2());
-
-class MyApp extends StatelessWidget {
+class Phase2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -36,25 +33,39 @@ class ChangeText extends State<ClickMyApp> {
     });
   }
 
+  final myController = TextEditingController();
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    myController.dispose();
+    super.dispose();
+  }
+
+  void sayHello(){
+    showDialog(context: context, builder: (context){
+      return AlertDialog(content:
+      Text('Hello ' + myController.text),);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(title: Text('Flutter App')),
-      body: Center(
-        child: new Text(
-          defaultText,
-          style: new TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.blue,
+      body: TextField(
+        controller: myController,
+          decoration: InputDecoration(
+            hintText: 'Enter your name'
           ),
-        ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: changeText,
+        onPressed: sayHello,
         tooltip: 'Click Me',
         child: Icon(Icons.mouse),
       ),
     );
   }
 }
+
