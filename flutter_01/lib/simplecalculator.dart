@@ -84,6 +84,9 @@ class Calculator extends State<MyCalculator> {
     // TODO: implement build
 
     return new Scaffold(
+      appBar: AppBar(
+        title: Text("IF(FLUTTER)"),
+      ),
       body: Form(
         key: my_form_key,
         child: Column(
