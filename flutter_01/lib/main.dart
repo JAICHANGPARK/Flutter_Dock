@@ -24,12 +24,14 @@ class ChangeText extends State<ClickMyApp> {
 
   void changeText() {
     setState(() {
-      if (i % 2 == 0) {
-        defaultText = 'Text hasbeen changed';
-      } else {
-        defaultText = 'Hello! click me to change content';
-      }
       i++;
+      defaultText = "Clicked : " + i.toString();
+//      if (i % 2 == 0) {
+//        defaultText = 'Text hasbeen changed';
+//      } else {
+//        defaultText = 'Hello! click me to change content';
+//      }
+//      i++;
     });
   }
 
