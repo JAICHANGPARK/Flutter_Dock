@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'src/article.dart';
 
@@ -45,8 +47,19 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: new AppBar(
         title: new Text(widget.title),
       ),
-      body: new ListView(
-        children: _article.map(_buildItem).toList(),
+      body: new RefreshIndicator(
+        onRefresh: () {
+
+
+//          Scaffold.
+//          of(context).
+//          showSnackBar(new SnackBar(content: new Text("REFRESHED")));
+
+          return new Future.delayed(const Duration(seconds: 1));
+        },
+        child: new ListView(
+          children: _article.map(_buildItem).toList(),
+        ),
       ),
 
       floatingActionButton: new FloatingActionButton(
