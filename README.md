@@ -20,6 +20,13 @@
 <td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/boaring_flutter/device-2018-08-25-183741.png" width="200">
 </td>
+  
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/boaring_flutter/device-2018-08-26-005204.png" width="200">
+</td>
+  
+  
  
 </tr></table></div>
 
