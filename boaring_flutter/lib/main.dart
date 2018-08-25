@@ -76,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildItem(Article e) {
 //    if(e.text.startsWith("Data")) return new Text(null);
     return new Padding(
+      key: Key(e.text),
       padding: const EdgeInsets.all(16.0),
       child: new ExpansionTile(
         title: new Text(
