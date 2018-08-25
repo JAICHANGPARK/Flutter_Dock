@@ -1,10 +1,11 @@
-import 'dart:convert ' as json;
+
+import 'dart:convert' as json;
 
 class Article {
   final String text;
   final String url;
   final String by;
-  final String time;
+  final int time;
   final int score;
 
   const Article({
@@ -40,7 +41,6 @@ Article parseArticle(String jsonStr) {
 //  throw UnimplementedError();
 
   final parsed = json.jsonDecode(jsonStr);
-
   Article article = Article.fromJson(parsed);
   return article;
 }
