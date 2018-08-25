@@ -3,7 +3,6 @@ import 'src/article.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
-
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -73,15 +72,19 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               new Text("${e.commentsCount} comments"),
-              new MaterialButton(
+              new IconButton(
+                icon: new Icon(Icons.launch),
                 color: Colors.green,
-                onPressed: (){
-
+                onPressed: () async {
+                  final fakeUrl = "http://${e.domain}";
+                  if (await canLaunch(fakeUrl)) {
+                    launch(fakeUrl);
+                  }
                 },
-                child: new Text("OPEN"),)
+//                child: new Text("OPEN"),
+              ),
             ],
           ),
-
         ],
 
 //        onTap: () async {
