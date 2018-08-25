@@ -62,19 +62,34 @@ class _MyHomePageState extends State<MyHomePage> {
 //    if(e.text.startsWith("Data")) return new Text(null);
     return new Padding(
       padding: const EdgeInsets.all(16.0),
-      child: new ListTile(
+      child: new ExpansionTile(
         title: new Text(
           e.text,
           style: new TextStyle(fontSize: 24.0),
         ),
-        subtitle: new Text("${e.commentsCount} comments"),
-        onTap: () async {
-          final fakeUrl = "http://${e.domain}";
-          print(fakeUrl);
-          if (await canLaunch(fakeUrl)) {
-            launch(fakeUrl);
-          }
-        },
+
+        children: <Widget>[
+          new Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              new Text("${e.commentsCount} comments"),
+              new MaterialButton(
+                color: Colors.green,
+                onPressed: (){
+
+                },
+                child: new Text("OPEN"),)
+            ],
+          ),
+
+        ],
+
+//        onTap: () async {
+//          final fakeUrl = "http://${e.domain}";
+//          if (await canLaunch(fakeUrl)) {
+//            launch(fakeUrl);
+//          }
+//        },
       ),
     );
   }
