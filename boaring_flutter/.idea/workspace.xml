@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="837562c5-63a2-42e5-9a67-785b611d0f83" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/json_parsing.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/json_test.dart" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/lib/json_parsing.dart" afterPath="$PROJECT_DIR$/lib/json_parsing.dart" />
+      <change beforePath="$PROJECT_DIR$/test/json_test.dart" afterPath="$PROJECT_DIR$/test/json_test.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -29,7 +29,7 @@
               <caret line="83" column="17" lean-forward="false" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1535204953548" expanded="true" signature="1268:1374" ph="..." />
+                <marker date="1535207575816" expanded="true" signature="1268:1374" ph="..." />
               </folding>
             </state>
           </provider>
@@ -50,10 +50,10 @@
       <file leaf-file-name="json_test.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/json_test.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="54" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="54" />
+            <state relative-caret-position="360">
+              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
-                <element signature="e#2#53#0" expanded="true" />
+                <element signature="e#3#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,8 +62,8 @@
       <file leaf-file-name="json_parsing.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/json_parsing.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            <state relative-caret-position="306">
+              <caret line="41" column="36" lean-forward="false" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -119,8 +119,8 @@
       <file leaf-file-name="article.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/article.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -146,10 +146,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/src/article.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/test/widget_test.dart" />
+        <option value="$PROJECT_DIR$/lib/src/article.dart" />
         <option value="$PROJECT_DIR$/lib/json_parsing.dart" />
         <option value="$PROJECT_DIR$/test/json_test.dart" />
       </list>
@@ -281,7 +281,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flutter Test.tests in test">
+  <component name="RunManager" selected="Flutter Test.tests in json_test.dart">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -315,6 +315,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="parses itemtories.json" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="parses itemtories.json" />
+      <option name="testFile" value="$PROJECT_DIR$/test/json_test.dart" />
+    </configuration>
+    <configuration name="tests in json_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/json_test.dart" />
     </configuration>
     <configuration name="tests in test" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
       <option name="testDir" value="$PROJECT_DIR$/test" />
@@ -371,13 +378,17 @@
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
-    <list size="2">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Flutter.main.dart" />
       <item index="1" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
+      <item index="2" class="java.lang.String" itemvalue="Flutter Test.tests in json_test.dart" />
+      <item index="3" class="java.lang.String" itemvalue="Flutter Test.parses itemtories.json" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Flutter Test.tests in json_test.dart" />
+        <item index="1" class="java.lang.String" itemvalue="Flutter Test.parses itemtories.json" />
+        <item index="2" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
       </list>
     </recent_temporary>
   </component>
@@ -398,16 +409,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests_in_test - 2018.08.25 at 22h 51m 36s.xml">
-      <configuration name="tests in test" configurationId="FlutterTestConfigType" />
+    <history-entry file="parses_itemtories_json - 2018.08.25 at 23h 40m 43s.xml">
+      <configuration name="parses itemtories.json" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="tests_in_test - 2018.08.25 at 22h 55m 56s.xml">
-      <configuration name="tests in test" configurationId="FlutterTestConfigType" />
+    <history-entry file="parses_itemtories_json - 2018.08.25 at 23h 40m 53s.xml">
+      <configuration name="parses itemtories.json" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="tests_in_test - 2018.08.25 at 23h 07m 27s.xml">
-      <configuration name="tests in test" configurationId="FlutterTestConfigType" />
+    <history-entry file="parses_itemtories_json - 2018.08.25 at 23h 40m 59s.xml">
+      <configuration name="parses itemtories.json" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="tests_in_test - 2018.08.25 at 23h 13m 01s.xml">
+    <history-entry file="tests_in_json_test_dart - 2018.08.25 at 23h 21m 06s.xml">
+      <configuration name="tests in json_test.dart" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="tests_in_json_test_dart - 2018.08.25 at 23h 21m 45s.xml">
+      <configuration name="tests in json_test.dart" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="tests_in_json_test_dart - 2018.08.25 at 23h 22m 59s.xml">
+      <configuration name="tests in json_test.dart" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="tests_in_json_test_dart - 2018.08.25 at 23h 23m 06s.xml">
+      <configuration name="tests in json_test.dart" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="tests_in_json_test_dart - 2018.08.25 at 23h 39m 47s.xml">
+      <configuration name="tests in json_test.dart" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="tests_in_json_test_dart - 2018.08.25 at 23h 41m 41s.xml">
+      <configuration name="tests in json_test.dart" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="tests_in_test - 2018.08.25 at 23h 19m 16s.xml">
       <configuration name="tests in test" configurationId="FlutterTestConfigType" />
     </history-entry>
   </component>
@@ -434,7 +463,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56924546" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -461,7 +490,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/json_parsing.dart</url>
+          <line>41</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -471,7 +509,7 @@
           <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1535204953548" expanded="true" signature="1268:1374" ph="..." />
+            <marker date="1535207575816" expanded="true" signature="1268:1374" ph="..." />
           </folding>
         </state>
       </provider>
@@ -552,14 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/article.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/device-2018-08-25-194853.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -571,7 +601,7 @@
           <caret line="83" column="17" lean-forward="false" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1535204953548" expanded="true" signature="1268:1374" ph="..." />
+            <marker date="1535207575816" expanded="true" signature="1268:1374" ph="..." />
           </folding>
         </state>
       </provider>
@@ -586,20 +616,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/article.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/json_parsing.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="306">
+          <caret line="41" column="36" lean-forward="false" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/json_test.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="54" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="54" />
+        <state relative-caret-position="360">
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding>
-            <element signature="e#2#53#0" expanded="true" />
+            <element signature="e#3#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

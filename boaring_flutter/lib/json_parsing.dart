@@ -1,9 +1,46 @@
-import 'package:boaring_flutter/src/article.dart';
+import 'dart:convert ' as json;
 
-List<int> parseTopStories(String json){
-  throw UnimplementedError();
+class Article {
+  final String text;
+  final String url;
+  final String by;
+  final String time;
+  final int score;
+
+  const Article({
+    this.text,
+    this.url,
+    this.by,
+    this.time,
+    this.score,
+  });
+
+  factory Article.fromJson(Map<String, dynamic> json) {
+    if (json == null) return null;
+
+    return Article(
+        text: json['text'] ?? ['null'],
+        url: json['url'],
+        by: json['by'],
+        time: json['time'],
+        score: json['score']);
+  }
 }
 
-Article parseArticle(String json){
-  throw UnimplementedError();
+List<int> parseTopStories(String jsonStr) {
+  final parsed = json.jsonDecode(jsonStr);
+  final listOfIds = List<int>.from(parsed);
+
+  return listOfIds;
+
+//  throw UnimplementedError();
+}
+
+Article parseArticle(String jsonStr) {
+//  throw UnimplementedError();
+
+  final parsed = json.jsonDecode(jsonStr);
+
+  Article article = Article.fromJson(parsed);
+  return article;
 }
