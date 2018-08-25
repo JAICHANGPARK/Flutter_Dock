@@ -8,17 +8,17 @@ class Article {
 
   const Article(
       {this.text,
-        this.domain,
-        this.by,
-        this.age,
-        this.score,
-        this.commentsCount});
+      this.domain,
+      this.by,
+      this.age,
+      this.score,
+      this.commentsCount});
 }
 
 final articles = [
   new Article(
     text:
-    "Circular Shock Acoustic Waves in Ionosphere Triggered by Launch of Formosat‐5",
+        "Circular Shock Acoustic Waves in Ionosphere Triggered by Launch of Formosat‐5",
     domain: "wiley.com",
     by: "zdw",
     age: "3 hours",
@@ -51,7 +51,7 @@ final articles = [
   ),
   new Article(
     text:
-    "Section 230: A Key Legal Shield for Facebook, Google Is About to Change",
+        "Section 230: A Key Legal Shield for Facebook, Google Is About to Change",
     domain: "npr.org",
     by: "Mononokay",
     age: "5 hours",
@@ -84,7 +84,7 @@ final articles = [
   ),
   new Article(
     text:
-    "Hedge-fund managers that do the most research will post the best returns",
+        "Hedge-fund managers that do the most research will post the best returns",
     domain: "cnbc.com",
     by: "anonu",
     age: "6 hours",
@@ -93,7 +93,7 @@ final articles = [
   ),
   new Article(
     text:
-    "Number systems of the world, sorted by complexity of counting (2006)",
+        "Number systems of the world, sorted by complexity of counting (2006)",
     domain: "airnet.ne.jp",
     by: "ColinWright",
     age: "8 hours",
@@ -126,7 +126,7 @@ final articles = [
   ),
   new Article(
     text:
-    "Power 9 May Dent X86 Servers: Alibaba, Google, Tencent Test IBM Systems",
+        "Power 9 May Dent X86 Servers: Alibaba, Google, Tencent Test IBM Systems",
     domain: "eetimes.com",
     by: "bcaulfield",
     age: "3 hours",
@@ -135,7 +135,7 @@ final articles = [
   ),
   new Article(
     text:
-    "Show HN: Transfer files to mobile device by scanning a QR code from the terminal",
+        "Show HN: Transfer files to mobile device by scanning a QR code from the terminal",
     domain: "github.com",
     by: "daw___",
     age: "7 hours",
@@ -160,7 +160,7 @@ final articles = [
   ),
   new Article(
     text:
-    "Data on 1.2M Facebook users from 2005 (2011) [use archive.org url in thread]",
+        "Data on 1.2M Facebook users from 2005 (2011) [use archive.org url in thread]",
     domain: "michaelzimmer.org",
     by: "feelin_googley",
     age: "1 hour",
@@ -201,7 +201,7 @@ final articles = [
   ),
   new Article(
     text:
-    "Krita 4.0 – A painting app for cartoonists, illustrators, and concept artists",
+        "Krita 4.0 – A painting app for cartoonists, illustrators, and concept artists",
     domain: "krita.org",
     by: "reddotX",
     age: "9 hours",
@@ -226,7 +226,7 @@ final articles = [
   ),
   new Article(
     text:
-    "TravisBuddy: Adds comments to failed pull requests, tells author what went wrong",
+        "TravisBuddy: Adds comments to failed pull requests, tells author what went wrong",
     domain: "github.com",
     by: "bluzi",
     age: "8 hours",
