@@ -47,14 +47,20 @@ class _MyHomePageState extends State<MyHomePage> {
         title: new Text(widget.title),
       ),
       body: new Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: _article.map((article) => new Center(child: new Text(article.text))).toList(),
+        children: _article.map(_buildItem).toList(),
       ),
+
       floatingActionButton: new FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: new Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+
+  Widget _buildItem(Article e) {
+//    if(e.text.startsWith("Data")) return new Text(null);
+    return new Text(e.text,
+    style: new TextStyle(fontSize: 24.0),);
   }
 }
