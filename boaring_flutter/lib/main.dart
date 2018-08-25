@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'src/article.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+
 
 void main() => runApp(new MyApp());
 
@@ -11,7 +13,6 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Flutter Demo',
       theme: new ThemeData(
-
         primarySwatch: Colors.blue,
       ),
       home: new MyHomePage(title: 'Flutter Demo Home Page'),
@@ -29,7 +30,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   List<Article> _article = articles;
 
   int _counter = 0;
@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: new AppBar(
         title: new Text(widget.title),
       ),
-      body: new Column(
+      body: new ListView(
         children: _article.map(_buildItem).toList(),
       ),
 
@@ -60,7 +60,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget _buildItem(Article e) {
 //    if(e.text.startsWith("Data")) return new Text(null);
-    return new Text(e.text,
-    style: new TextStyle(fontSize: 24.0),);
+    return new Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: new ListTile(
+        title: new Text(
+          e.text,
+          style: new TextStyle(fontSize: 24.0),
+        ),
+        subtitle: new Text("${e.commentsCount} comments"),
+        onTap: () async {
+          final fakeUrl = "http://${e.domain}";
+          print(fakeUrl);
+          if (await canLaunch(fakeUrl)) {
+            launch(fakeUrl);
+          }
+        },
+      ),
+    );
   }
 }
