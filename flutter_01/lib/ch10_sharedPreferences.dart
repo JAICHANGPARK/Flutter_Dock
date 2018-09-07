@@ -52,7 +52,7 @@ class DisplayLayout extends State<MyHomePage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: RaisedButton(
-                  onPressed: saveData(_controller_key.text, _controller_data.text),
+                  onPressed: () => saveData(_controller_key.text, _controller_data.text),
                   child: Text('Save Data'),
                 ),
               ),
@@ -60,7 +60,7 @@ class DisplayLayout extends State<MyHomePage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: RaisedButton(
-                  onPressed: readData(_controller_key.text, _controller_data.text),
+                  onPressed: () => readData(_controller_key.text, _controller_data.text),
                   child: Text('Read Data'),
                 ),
               ),

@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0d9b636-14d9-4826-8490-20f787fa558e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ch10_sharedPreferences.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/handleTaponWidgets.dart" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/main.dart" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" afterPath="$PROJECT_DIR$/pubspec.lock" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" afterPath="$PROJECT_DIR$/pubspec.yaml" />
+      <change beforePath="$PROJECT_DIR$/lib/ch10_sharedPreferences.dart" afterPath="$PROJECT_DIR$/lib/ch10_sharedPreferences.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -36,13 +29,6 @@
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="device-2018-09-07-225206.png" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/device-2018-09-07-225206.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -93,12 +79,19 @@
       <file leaf-file-name="ch10_sharedPreferences.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ch10_sharedPreferences.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="414">
+              <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="device-2018-09-07-225515.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/device-2018-09-07-225515.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -159,8 +152,8 @@
         <option value="$PROJECT_DIR$/lib/activity_image.dart" />
         <option value="$PROJECT_DIR$/lib/handleTaponWidgets.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/lib/ch10_sharedPreferences.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
+        <option value="$PROJECT_DIR$/lib/ch10_sharedPreferences.dart" />
       </list>
     </option>
   </component>
@@ -799,14 +792,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ch10_sharedPreferences.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/device-2018-09-07-225206.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
@@ -819,7 +807,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/device-2018-09-07-225206.png">
+    <entry file="file://$PROJECT_DIR$/lib/ch10_sharedPreferences.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/device-2018-09-07-225515.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
