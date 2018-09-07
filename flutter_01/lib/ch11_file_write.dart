@@ -45,7 +45,7 @@ class Ch11FileWrite extends StatelessWidget {
         theme: new ThemeData(
           primarySwatch: Colors.red,
         ),
-        home: MyHomePage(storage: MyStorage(),));
+        home: MyHomePage(storage: MyStorage()));
   }
 }
 
