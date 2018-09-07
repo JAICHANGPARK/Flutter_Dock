@@ -15,7 +15,7 @@ class Post {
 
   factory Post.fromJson(Map<String, dynamic> json) {
     return Post(
-        userId: json['userID'],
+        userId: json['userId'],
         id: json['id'],
         title: json['title'],
         body: json['body']);
@@ -24,7 +24,7 @@ class Post {
 
 Future<Post> fetchPost() async {
   final response =
-      await http.get('https://jsonplaceholder.typicode.com/posts/1');
+      await http.get('https://jsonplaceholder.typicode.com/posts/2');
 
   if (response.statusCode == 200) {
     return Post.fromJson(json.decode(response.body));
@@ -69,7 +69,31 @@ class DisplayLayout extends State<MyHomePage> {
           child: FutureBuilder<Post>(
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return Text(snapshot.data.body);
+                String title = snapshot.data.title;
+                String body = snapshot.data.body;
+                int id = snapshot.data.id;
+                int userId = snapshot.data.userId;
+                 return Column(mainAxisAlignment: MainAxisAlignment.center,
+                     children: <Widget>[
+                       Padding(padding: EdgeInsets.all(12.0),
+                         child: Text('UserId : $userId'),
+
+                       ),
+                       Padding(padding: EdgeInsets.all(12.0),
+                         child: Text('Id : $id'),
+
+                       ),
+                       Padding(padding: EdgeInsets.all(12.0),
+                         child: Text('body : $body'),
+
+                       ),
+                       Padding(padding: EdgeInsets.all(12.0),
+                         child: Text('title : $title'),
+
+                       ),
+
+                     ],);
+//                return Text(snapshot.data.body);
               } else if (snapshot.hasError) {
                 return Text(snapshot.error);
               }
