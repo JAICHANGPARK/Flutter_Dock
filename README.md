@@ -24,6 +24,17 @@
 </tr></table></div>
 
 - flutter 01 : study and lab
+
+<div style="text-align: center"><table><tr>
+<td style="text-align: center">
+  <a href="https://twitter.com/BlueAquilae/status/1018208010643103744">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_01/device-2018-09-07-225206.png" width="200">
+  </a>
+</td>
+</tr></table></div>
+
+
+
 - flutter timer : egg timer 
 - mcd_100_series : google code lab 
 
