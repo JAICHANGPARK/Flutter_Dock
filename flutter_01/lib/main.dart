@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_01/ch10_sharedPreferences.dart';
+import 'package:flutter_01/handleTaponWidgets.dart';
 import 'package:flutter_01/phase2.dart';
 import 'package:flutter_01/simplecalculator.dart';
 
@@ -7,11 +9,17 @@ import 'package:flutter_01/activity_interface_0.dart';
 
 
 
-void main() => runApp(
-  MaterialApp(
-    home: new FirstScreenTwo(),
-  )
-);
+//void main() => runApp(
+//  MaterialApp(
+//    home: new FirstScreenTwo(),
+//  )
+//
+//
+//);
+
+//void main() => runApp(HandleTapOnWidgets());
+
+void main() => runApp(MySharedPreferences());
 
 class MyApp extends StatelessWidget {
   @override
@@ -21,6 +29,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(title: 'My App Hello world',
         home: ClickMyApp());
   }
+
+
 }
 
 class ClickMyApp extends StatefulWidget {
