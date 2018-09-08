@@ -5,6 +5,7 @@ import 'package:flutter_01/ch12_json_basic.dart';
 import 'package:flutter_01/ch13_json_advance.dart';
 import 'package:flutter_01/ch14_get_location.dart';
 import 'package:flutter_01/handleTaponWidgets.dart';
+import 'package:flutter_01/my_first_flutter_ble.dart';
 import 'package:flutter_01/phase2.dart';
 import 'package:flutter_01/simplecalculator.dart';
 
@@ -27,7 +28,9 @@ import 'package:flutter_01/activity_interface_0.dart';
 //void main() => runApp(MyJsonBasic());
 //void main() => runApp(MyJsonAdvance());
 
-void main() => runApp(MyLocationPark());
+//void main() => runApp(MyLocationPark());
+
+void main() => runApp(FlutterBlueApp());
 
 
 class MyApp extends StatelessWidget {
