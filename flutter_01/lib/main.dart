@@ -3,6 +3,7 @@ import 'package:flutter_01/ch10_sharedPreferences.dart';
 import 'package:flutter_01/ch11_file_write.dart';
 import 'package:flutter_01/ch12_json_basic.dart';
 import 'package:flutter_01/ch13_json_advance.dart';
+import 'package:flutter_01/ch14_get_location.dart';
 import 'package:flutter_01/handleTaponWidgets.dart';
 import 'package:flutter_01/phase2.dart';
 import 'package:flutter_01/simplecalculator.dart';
@@ -21,13 +22,13 @@ import 'package:flutter_01/activity_interface_0.dart';
 //);
 
 //void main() => runApp(HandleTapOnWidgets());
-
 //void main() => runApp(MySharedPreferences());
-
 //void main() => runApp(Ch11FileWrite());
-
 //void main() => runApp(MyJsonBasic());
-void main() => runApp(MyJsonAdvance());
+//void main() => runApp(MyJsonAdvance());
+
+void main() => runApp(MyLocationPark());
+
 
 class MyApp extends StatelessWidget {
   @override

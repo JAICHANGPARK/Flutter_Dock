@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
+import 'package:location/location.dart';
+import 'package:flutter/services.dart';
+
 
 /**
  *   {
@@ -44,7 +47,6 @@ class Company {
         name: json['name'], catchPhrase: json['catchPhrase'], bs: json['bs']);
   }
 }
-
 class Geo {
   final String let, lng;
   Geo({this.let, this.lng});
@@ -52,7 +54,6 @@ class Geo {
     return Geo(let: json['lat'], lng: json['lng']);
   }
 }
-
 class Address {
   final String street, suite, zipcode;
   final Geo geo;
@@ -65,7 +66,6 @@ class Address {
         geo: Geo.fromJson(json['geo']));
   }
 }
-
 class User {
   final int id;
   final String name, username, email, phone, website;
@@ -74,13 +74,13 @@ class User {
 
   User(
       {this.id,
-      this.name,
-      this.username,
-      this.email,
-      this.phone,
-      this.website,
-      this.address,
-      this.company});
+        this.name,
+        this.username,
+        this.email,
+        this.phone,
+        this.website,
+        this.address,
+        this.company});
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
@@ -94,7 +94,6 @@ class User {
         company: Company.fromJson(json['company']));
   }
 }
-
 Future<List<User>> fetchListUser() async {
   String urls = 'https://jsonplaceholder.typicode.com/users';
   final response = await http.get(urls);
@@ -106,13 +105,13 @@ Future<List<User>> fetchListUser() async {
   }
 }
 
-class MyJsonAdvance extends StatelessWidget {
+class MyLocationPark extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
 
     return MaterialApp(
-        title: 'JSON ADVANCE',
+        title: 'GET MY LOCATION',
         theme: new ThemeData(
           accentColor: Colors.tealAccent,
           primarySwatch: Colors.teal,
@@ -127,6 +126,29 @@ class MyHomePage extends StatefulWidget {
 }
 
 class DisplayLayout extends State<MyHomePage> {
+
+  Map<String, double> currentLocation = new Map();
+  StreamSubscription<Map<String, double>> locationSubscription;
+  Location locations = new Location();
+  String error;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    // 기본 주소
+    currentLocation['latitude'] = 0.0;
+    currentLocation['longitude'] = 0.0;
+
+    initPlatformState();
+    locationSubscription = locations.onLocationChanged().listen((Map<String,double> result){
+      setState(() {
+        currentLocation = result;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -135,33 +157,35 @@ class DisplayLayout extends State<MyHomePage> {
           title: Text('Json BASIC'),
         ),
         body: Center(
-          child: FutureBuilder<List<User>>(
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                List<User> users = snapshot.data;
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text('Lat/Lng : ${currentLocation['latitude']} / ${currentLocation['longitude']}',
+              style: TextStyle(fontSize: 20.0, color: Colors.blueAccent),)
 
-                return new ListView(
-                  children: users
-                      .map((user) => Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Text('UserName : ${user.username}'),
-                              Text('UserName : ${user.name}'),
-                              Text('Lat/Lng : ${user.address.geo.let} / ${user.address.geo.lng}'),
-                              new Divider()
-                            ],
-                          ))
-                      .toList(),
-                );
-              } else if (snapshot.hasError) {
-                return Text(snapshot.error);
-              }
-
-              return CircularProgressIndicator();
-            },
-            future: fetchListUser(),
+            ],
           ),
-        ));
+    ));
+  }
+
+  void initPlatformState() async{
+    Map<String, double> myLocation;
+    try{
+      myLocation = await locations.getLocation();
+      error ="";
+    }on PlatformException catch(e){
+      if(e.code =='PERMISSION_DENIED'){
+        error = 'PERMISSION_DENIED';
+      }else if(e.code == 'PERMISSION_DENIED_NEVER_ASK'){
+        error = 'PERMISSION_DENIED_NEVER_ASK';
+      }
+      myLocation = null;
+    }
+
+    setState(() {
+      currentLocation = myLocation;
+    });
+
   }
 }
 
