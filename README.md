@@ -84,6 +84,9 @@
 <td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/mdc_100_series/device-2018-08-26-005358.png" width="200">
 </td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/mdc_100_series/device-2018-09-08-152111.png" width="200">
+</td>
 </tr></table></div>
 
 
