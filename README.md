@@ -9,13 +9,30 @@
 
 # Contain
 
-- boaring flutter : flutter 
+### Instagram
+
+
 
 <div style="text-align: center"><table><tr>
 <td style="text-align: center">
- 
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/boaring_flutter/device-2018-08-25-183138.png" width="200">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_instagram_clone/img/device-2018-09-22-211214.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_instagram_clone/img/device-2018-09-22-211006.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_instagram_clone/img/device-2018-09-22-190101.png" width="200">
+</td>
+</td>
+</tr>
+</table>
+</div>
 
+### boaring flutter : flutter 
+
+<div style="text-align: center"><table><tr>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/boaring_flutter/device-2018-08-25-183138.png" width="200">
 </td>
 <td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/boaring_flutter/device-2018-08-25-183548.png" width="200">
@@ -27,7 +44,9 @@
 <td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/boaring_flutter/device-2018-08-26-005204.png" width="200">
 </td>
-</tr></table></div>
+</tr>
+</table>
+</div>
 
 - flutter 01 : study and lab
 
