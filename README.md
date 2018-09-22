@@ -85,9 +85,9 @@
 </td>
 </tr></table></div>
 
-- flutter timer : egg timer 
-- mcd_100_series : google code lab 
+### flutter timer : egg timer 
 
+### mcd_100_series : google code lab 
 <div style="text-align: center"><table><tr>
 <td style="text-align: center">
  
