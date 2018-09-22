@@ -102,7 +102,7 @@ class InstaList extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
-                    "Liked by unknwon, test and 123,456,789 others",
+                    "Liked by unknown, test and 123,456,789 others",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
