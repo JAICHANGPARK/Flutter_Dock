@@ -11,8 +11,6 @@
 
 ### Instagram
 
-
-
 <div style="text-align: center"><table><tr>
 <td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_instagram_clone/img/device-2018-09-22-211214.png" width="200">
@@ -27,6 +25,18 @@
 </tr>
 </table>
 </div>
+
+### Flutter Poketmon
+
+-Update : 2018 09 22
+<div style="text-align: center"><table><tr>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_poketmon/device-2018-09-22-155635.png" width="200">
+</td>
+  <td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_poketmon/device-2018-09-22-152903.png" width="200">
+</td>
+</tr></table></div>
 
 ### boaring flutter : flutter 
 
@@ -49,7 +59,6 @@
 </div>
 
 - flutter 01 : study and lab
-
 
 ### Shared Preferences 
 <div style="text-align: center"><table><tr>
@@ -121,16 +130,10 @@
 </td>
 </tr></table></div>
 
-### Flutter Poketmon
--Update : 2018 09 22
-<div style="text-align: center"><table><tr>
-<td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_poketmon/device-2018-09-22-155635.png" width="200">
-</td>
-  <td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_poketmon/device-2018-09-22-152903.png" width="200">
-</td>
-</tr></table></div>
+### Flutter Sqlite
+comming soon
+
+
 
 
 
