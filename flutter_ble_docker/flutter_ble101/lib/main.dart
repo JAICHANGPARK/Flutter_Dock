@@ -2,8 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_ble101/detail_activity.dart';
+import 'package:flutter_ble101/github_page.dart';
 import 'package:flutter_ble101/widgets.dart';
 import 'package:flutter_blue/flutter_blue.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+
 
 void main() => runApp(new MyApp());
 
@@ -16,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.cyan,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: new MyHomePage(title: 'Dreamwalker BLE Utils'),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -59,6 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+
   @override
   void initState() {
     super.initState();
@@ -93,7 +98,17 @@ class _MyHomePageState extends State<MyHomePage> {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(widget.title),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(FontAwesomeIcons.github),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => GithubClass()));}
+//              _select(choices[0]);
+            ,
+          ),
+        ],
       ),
+      
       body: new Stack(
         children: <Widget>[
           (isScanning) ? new LinearProgressIndicator(

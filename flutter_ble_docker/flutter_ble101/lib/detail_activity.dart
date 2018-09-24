@@ -54,17 +54,12 @@ class DetailScreenState extends State<DetailScreen> {
   static _handleSubmission(String text) {
 // Not triggered when you press enter on keyboard in  android simulator
 // Triggers if you tap on the Done button.
-
-    String value = myControllers.text;
+    mySendValue.clear();
     print(text.length);
-
     for (int i = 0; i<text.length; i++){
       print(text[i]);
-      int tmp = int.parse(text[i]);
-      print(tmp);
-//          mySendValue.add(int.parse(value[i]));
+      mySendValue.add(text[i].codeUnitAt(0));
     }
-
 
   }
 
