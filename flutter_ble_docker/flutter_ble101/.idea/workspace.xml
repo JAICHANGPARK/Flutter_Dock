@@ -10,14 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6318b38-b084-4e77-82d1-e11f64f11b32" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../flutter_floating_action_button/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../flutter_floating_action_button/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../flutter_floating_action_button/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../flutter_floating_action_button/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../flutter_floating_action_button/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../flutter_floating_action_button/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../flutter_floating_action_button/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -305,7 +299,7 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="7" weight="0.32949087" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3246878" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3246878" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32981783" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32949087" />
       <window_info anchor="right" id="Flutter Outline" order="3" />

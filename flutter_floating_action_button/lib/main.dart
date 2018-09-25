@@ -1,4 +1,5 @@
 import 'package:flutter/animation.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -64,8 +65,44 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
     return new Scaffold(
         appBar: AppBar(title: Text("Floating Action"),
         backgroundColor: Colors.deepOrange,
+          elevation: defaultTargetPlatform == TargetPlatform.android? 5.0 : 0.0,
         ),
-        drawer: Drawer(),
+        drawer: Drawer(
+          child: ListView(
+            children: <Widget>[
+              
+              UserAccountsDrawerHeader(
+                accountName: Text("Dreamwalker"),
+                accountEmail: Text("aristojeff@gmail.com"),
+                currentAccountPicture: new CircleAvatar(
+                  backgroundColor: Colors.deepOrange,
+                  child: Text("P"),
+                ),
+                otherAccountsPictures: <Widget>[
+                  CircleAvatar(
+                    backgroundColor: Colors.orange,
+                    child: Text("K"),
+                  )
+                ],
+              ),
+
+              ListTile(
+                title: Text("Page One"),
+                trailing: Icon(Icons.arrow_upward),
+              ),
+              ListTile(
+                title: Text("Page Two"),
+                trailing: Icon(Icons.arrow_downward),
+              ),
+              Divider(),
+              ListTile(
+                title: Text("Close"),
+                trailing: Icon(Icons.close),
+              ),
+
+            ],
+          ),
+        ),
         body: new Stack(
             children: <Widget>[
               new Positioned(
