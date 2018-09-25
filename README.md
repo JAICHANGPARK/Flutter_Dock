@@ -126,7 +126,7 @@
 </table>
 </div>
 
-### 플로팅 액션 버튼
+### 플로팅 액션 버튼 & 네비게이션 드로우어
 
 <div style="text-align: center"><table><tr>
 <td style="text-align: center">
@@ -134,6 +134,9 @@
 </td>
 <td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_floating_action_button/device-2018-09-25-194345.png" width="200">
+</td>
+<td style="text-align: center">
+<img src=" https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_floating_action_button/device-2018-09-25-200434.png" width="200">
 </td>
 </tr>
 </table>
