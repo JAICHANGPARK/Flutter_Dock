@@ -105,7 +105,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   Navigator.of(context).push(MaterialPageRoute(builder:
                   (BuildContext context) => new NewPageOne("Page One")));
               },
-                
+
               ),
               ListTile(
                 title: Text("Page Two"),
