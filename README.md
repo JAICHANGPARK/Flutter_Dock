@@ -74,6 +74,20 @@
 </td>
 </tr></table></div>
 
+### Theme Change and iOS style Setting
+<div style="text-align: center"><table><tr>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_dark_mode/device-2018-09-26-012331.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_dark_mode/device-2018-09-26-012346.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_dark_mode/device-2018-09-26-012409.png" width="200">
+</td>
+</tr></table></div>
+
+
 ### Json Parse
 <div style="text-align: center"><table><tr>
 <td style="text-align: center">
