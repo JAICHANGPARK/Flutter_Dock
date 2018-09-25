@@ -85,6 +85,11 @@
 <td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_dark_mode/device-2018-09-26-012409.png" width="200">
 </td>
+ <td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_dark_mode/device-2018-09-26-015034.png" width="200">
+</td>
+  
+  
 </tr></table></div>
 
 
