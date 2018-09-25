@@ -22,7 +22,7 @@ class SettingsItem extends StatefulWidget {
     this.value,
     this.hasDetails = false,
     this.onPress,
-    this.modeChanged,
+
   }) : assert(label != null),
         assert(type != null);
 
@@ -33,15 +33,15 @@ class SettingsItem extends StatefulWidget {
   final String value;
   final bool hasDetails;
   final PressOperationCallback onPress;
-  final bool modeChanged;
+
 
   @override
-  State<StatefulWidget> createState() => new SettingsItemState(modeChanged);
+  State<StatefulWidget> createState() => new SettingsItemState();
 }
 
 class SettingsItemState extends State<SettingsItem> {
 
-  SettingsItemState(this.switchValue);
+
   bool switchValue = false;
   bool pressed = false;
 

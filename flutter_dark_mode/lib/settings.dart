@@ -15,7 +15,7 @@ class SettingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
+    return new CupertinoApp(
 
       title: "Setting ",
       home: settingsWidget(),
@@ -31,6 +31,7 @@ class settingsWidget extends StatelessWidget {
     // TODO: implement build
 
     return CupertinoPageScaffold(
+
       child: Container(
         color: backgroundGray,
         child: CustomScrollView(

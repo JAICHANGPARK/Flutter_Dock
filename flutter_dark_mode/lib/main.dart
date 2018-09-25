@@ -30,6 +30,8 @@ class MyAppState extends State<MyApp> {
 }
 
 class HomePage extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -41,13 +43,19 @@ class HomePage extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           children: <Widget>[
+            ListTile(
+                title: Text("Settings"),
+                trailing: Switch(
+                    value: darkModeEnable,
+                    onChanged: (changedTheme) {
+                      darkModeEnable = changedTheme;
+                    })),
             GestureDetector(
               onTap: () {
                 Navigator.of(context).pushNamed('/screen1'); //2
               },
               child: ListTile(
-                  title: Text("Dark Mode"),
-                  trailing: Icon(Icons.arrow_forward)),
+                  title: Text("Settings"), trailing: Icon(Icons.arrow_forward)),
             ),
           ],
         ),
