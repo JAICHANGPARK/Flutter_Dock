@@ -58,6 +58,33 @@
 </table>
 </div>
 
+### Flutter Ble 
+
+<div style="text-align: center"><table><tr>
+<td style="text-align: center">
+ 
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_01/Inkeddevice-2018-09-08-160700_LI.jpg" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_01/Inkeddevice-2018-09-08-160719_LI.jpg" width="200">
+</td>
+
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_ble_docker/flutter_ble101/device-2018-09-25-022148.png" width="200">
+</td>
+</tr></table></div>
+
+### Json Parse
+<div style="text-align: center"><table><tr>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_01/device-2018-09-08-000339.png" width="200">
+</td>
+  <td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_01/device-2018-09-08-143309.png" width="200">
+</td>
+</tr></table></div>
+
+
 - flutter 01 : study and lab
 
 ### Shared Preferences 
@@ -84,40 +111,6 @@
 </td>
 </tr></table></div>
 
-### Json Parse
-<div style="text-align: center"><table><tr>
-<td style="text-align: center">
-
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_01/device-2018-09-08-000339.png" width="200">
-
-</td>
-  <td style="text-align: center">
-
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_01/device-2018-09-08-143309.png" width="200">
-
-</td>
-</tr></table></div>
-
-### Flutter Ble 
-
-<div style="text-align: center"><table><tr>
-<td style="text-align: center">
- 
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_01/Inkeddevice-2018-09-08-160700_LI.jpg" width="200">
-</td>
-<td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_01/Inkeddevice-2018-09-08-160719_LI.jpg" width="200">
-</td>
-
-<td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_ble_docker/flutter_ble101/device-2018-09-25-022148.png" width="200">
-</td>
-
-
-</tr></table></div>
-
-### flutter timer : egg timer 
-
 ### mcd_100_series : google code lab 
 <div style="text-align: center"><table><tr>
 <td style="text-align: center">
@@ -133,9 +126,6 @@
 </table>
 </div>
 
-### Flutter Sqlite
-comming soon
-
 ### 플로팅 액션 버튼
 
 <div style="text-align: center"><table><tr>
@@ -149,6 +139,11 @@ comming soon
 </table>
 </div>
 
+
+### Flutter Sqlite
+comming soon
+
+### flutter timer : egg timer 
 
 
 
