@@ -1,9 +1,16 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_floating_action_button/page_one.dart';
 
 void main() {
-  runApp(new MaterialApp(home: new HomePage(), debugShowCheckedModeBanner: false,));
+  runApp(new MaterialApp(home: new HomePage(),
+    debugShowCheckedModeBanner: false,
+  routes: <String, WidgetBuilder>{
+
+    "/a" : (BuildContext context) => new NewPageOne("Page One"),
+
+  },));
 }
 
 class HomePage extends StatefulWidget {
@@ -75,8 +82,11 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 accountName: Text("Dreamwalker"),
                 accountEmail: Text("aristojeff@gmail.com"),
                 currentAccountPicture: new CircleAvatar(
-                  backgroundColor: Colors.deepOrange,
+                  backgroundColor:
+                  Theme.of(context).platform == TargetPlatform.iOS ?
+                  Colors.deepOrange : Colors.white,
                   child: Text("P"),
+
                 ),
                 otherAccountsPictures: <Widget>[
                   CircleAvatar(
@@ -89,6 +99,13 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ListTile(
                 title: Text("Page One"),
                 trailing: Icon(Icons.arrow_upward),
+//                onTap: () => {avigator.of(context).pushNamed("/a"),
+              onTap: (){
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(MaterialPageRoute(builder:
+                  (BuildContext context) => new NewPageOne("Page One")));
+              },
+                
               ),
               ListTile(
                 title: Text("Page Two"),
@@ -98,6 +115,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ListTile(
                 title: Text("Close"),
                 trailing: Icon(Icons.close),
+                onTap: () => Navigator.of(context).pop(),
               ),
 
             ],
