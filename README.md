@@ -175,6 +175,11 @@
   <td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_capture_image/device-2018-09-28-101331.png" width="200">
 </td>
+</td>
+  <td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_capture_image/device-2018-09-28-102853.png" width="200">
+</td>  
+  
 </tr>
 </table>
 </div>
