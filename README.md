@@ -176,10 +176,9 @@
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_capture_image/device-2018-09-28-101331.png" width="200">
 </td>
 </td>
-  <td style="text-align: center">
+<td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_capture_image/device-2018-09-28-102853.png" width="200">
 </td>  
-  
 </tr>
 </table>
 </div>
@@ -190,7 +189,27 @@ comming soon
 
 
 ### Flutter Data Table Control
-comming soon
+
+<div style="text-align: center">
+<table>
+<tr>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_data_table/device-2018-09-29-233501.png" width="200">
+</td>
+
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_data_table/device-2018-09-29-235508.png" width="200">
+</td>
+
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_data_table/device-2018-09-29-234855.png" width="200">
+</td>
+
+</tr>
+</table>
+</div>
+
+
 
 
 ### Flutter Sqlite
