@@ -185,7 +185,20 @@
 
 
 ### Flutter Video
-comming soon
+
+<div style="text-align: center">
+<table>
+<tr>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_video_play/device-2018-09-29-230625.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_video_play/device-2018-09-29-230643.png" width="200">
+</td>
+</tr>
+</table>
+</div>
+
 
 
 ### Flutter Data Table Control
