@@ -237,6 +237,24 @@
 </table>
 </div>
 
+### Flutter App Intro
+<div style="text-align: center">
+<table>
+<tr>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_app_intro/flutter_splash_part0/device-2018-10-02-095639.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_app_intro/flutter_splash_part0/device-2018-10-02-093009.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_app_intro/flutter_splash_part0/device-2018-10-02-091945.png" width="200">
+</td>
+</tr>
+</table>
+</div>
+
+
 ### Flutter Sqlite
 comming soon
 
