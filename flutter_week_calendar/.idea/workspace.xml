@@ -28,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="84" column="42" lean-forward="true" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
+            <state relative-caret-position="187">
+              <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -40,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="device-2018-10-03-121051.png" pinned="false" current-in-tab="true">
+      <file leaf-file-name="device-2018-10-03-121051.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/device-2018-10-03-121051.png">
           <provider selected="true" editor-type-id="images">
             <state />
@@ -224,7 +224,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.4120469" side_tool="true" weight="0.2659218" />
       <window_info anchor="bottom" id="Dart Analysis" order="13" weight="0.20380738" />
       <window_info anchor="right" id="Flutter Outline" order="3" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="12" sideWeight="0.65724945" visible="true" weight="0.27771556" />
+      <window_info anchor="bottom" id="Logcat" order="12" sideWeight="0.65724945" weight="0.27771556" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -236,7 +236,7 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32922733" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32922733" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.5486381" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32885906" />
       <window_info id="Captures" order="2" weight="0.25" />
@@ -303,19 +303,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/device-2018-10-03-121051.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="84" column="42" lean-forward="true" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
+        <state relative-caret-position="187">
+          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/device-2018-10-03-121051.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
   </component>
