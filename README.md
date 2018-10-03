@@ -97,6 +97,10 @@
 <td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_week_calendar/device-2018-10-03-115253.png" width="200">
 </td>
+      <td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_week_calendar/device-2018-10-03-121051.png" width="200">
+</td>
+     
 </tr>
 </table>
 </div>
