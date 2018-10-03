@@ -46,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
       appBar: new AppBar(
         title: new Text(widget.title),
       ),
@@ -79,12 +80,16 @@ class _MyHomePageState extends State<MyHomePage> {
             Divider(
               height: 50.0,
             ),
-            Text(selectDate, textAlign: TextAlign.center,),
+            new Text(
+              selectDate != null ? selectDate : "",
+              textAlign: TextAlign.center,
+            ),
           ],
 //
         ),
       ),
       floatingActionButton: new FloatingActionButton(
+        onPressed: () {},
         tooltip: 'Increment',
         child: new Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
