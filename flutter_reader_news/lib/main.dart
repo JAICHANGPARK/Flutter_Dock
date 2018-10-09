@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_reader_news/model/model.dart';
 import 'package:http/http.dart' as http;
 
-String API_KEY = "26177c7ba8a54b4b9c46981f1b53a11d";
+String API_KEY = "your_api_key";
 
 Future<List<Source>> fetchNewsSource() async {
   final response =
@@ -75,41 +75,64 @@ class MyAppState extends State<MyApp> {
                                           CrossAxisAlignment.center,
                                       children: <Widget>[
                                         Container(
-
                                           margin: const EdgeInsets.symmetric(
-                                              horizontal: 2.0, vertical: 8.0),
+                                              horizontal: 8.0, vertical: 8.0),
                                           width: 100.0,
                                           height: 140.0,
-                                          child: Image.asset("assets/newspaper.png"),
+                                          child: Image.asset(
+                                              "assets/newspaper.png"),
                                         ),
                                         Expanded(
                                           child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: <Widget>[
                                               Row(
                                                 children: <Widget>[
                                                   Expanded(
-                                                    child: Container(
-                                                      margin: const EdgeInsets.only(left:8.0, top: 20.0, bottom: 10.0),
-                                                      child: Text('${source.name}', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                                                      child: Container(
+                                                    margin:
+                                                        const EdgeInsets.only(
+                                                            left: 8.0,
+                                                            top: 20.0,
+                                                            bottom: 10.0),
+                                                    child: Text(
+                                                      '${source.name}',
+                                                      style: TextStyle(
+                                                          fontSize: 18.0,
+                                                          fontWeight:
+                                                              FontWeight.bold),
                                                     ),
-                                                  )
-                                                  )
+                                                  ))
                                                 ],
                                               ),
                                               Container(
-                                                margin: const EdgeInsets.only(left:8.0, top:5.0, bottom: 5.0),
-                                                child: Text('${source.description}', style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.grey),
+                                                margin: const EdgeInsets.only(
+                                                    left: 8.0,
+                                                    top: 5.0,
+                                                    bottom: 5.0),
+                                                child: Text(
+                                                  '${source.description}',
+                                                  style: TextStyle(
+                                                      fontSize: 14.0,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      color: Colors.grey),
                                                 ),
                                               ),
-
                                               Container(
-                                                margin: const EdgeInsets.only(left:8.0, top: 5.0, bottom: 5.0),
-                                                child: Text('Category : ${source.category}', style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold),
+                                                margin: const EdgeInsets.only(
+                                                    left: 8.0,
+                                                    top: 5.0,
+                                                    bottom: 5.0),
+                                                child: Text(
+                                                  'Category : ${source.category}',
+                                                  style: TextStyle(
+                                                      fontSize: 14.0,
+                                                      fontWeight:
+                                                          FontWeight.bold),
                                                 ),
                                               )
-
                                             ],
                                           ),
                                         )

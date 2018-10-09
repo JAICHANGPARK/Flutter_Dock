@@ -10,11 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb24eb07-5eb1-441d-b90c-6648f1403255" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/newspaper.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/model/model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -35,11 +31,8 @@
       <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -246,7 +239,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.4120469" side_tool="true" weight="0.2659218" />
       <window_info anchor="bottom" id="Dart Analysis" order="13" weight="0.32922733" />
       <window_info anchor="right" id="Flutter Outline" order="3" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="12" sideWeight="0.65724945" visible="true" weight="0.2788354" />
+      <window_info anchor="bottom" id="Logcat" order="12" sideWeight="0.65724945" visible="true" weight="0.2788354" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -263,7 +256,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.5486381" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32922733" />
       <window_info id="Captures" order="2" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19296375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19296375" />
       <window_info anchor="right" id="Fabric" order="8" weight="0.32992327" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="7" side_tool="true" />
@@ -286,11 +279,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
@@ -336,6 +325,11 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/device-2018-10-09-120001.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/model/model.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -343,18 +337,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/device-2018-10-09-120001.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
