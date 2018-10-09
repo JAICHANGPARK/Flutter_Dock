@@ -38,6 +38,57 @@
 </td>
 </tr></table></div>
 
+### Flutter News Reader
+
+<div style="text-align: center">
+<table>
+<tr>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_reader_news/device-2018-10-09-120001.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_reader_news/device-2018-10-09-161822.png" width="200">
+</td>
+ <td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_reader_news/device-2018-10-09-162709.png" width="200">
+</td>
+</tr>
+</table>
+</div>
+
+
+### Flutter App Intro
+<div style="text-align: center">
+<table>
+<tr>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_app_intro/flutter_splash_part0/device-2018-10-02-095639.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_app_intro/flutter_splash_part0/device-2018-10-02-093009.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_app_intro/flutter_splash_part0/device-2018-10-02-091945.png" width="200">
+</td>
+</tr>
+</table>
+</div>
+
+### mcd_100_series : google code lab 
+<div style="text-align: center"><table><tr>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/mdc_100_series/device-2018-08-26-005340.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/mdc_100_series/device-2018-08-26-005358.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/mdc_100_series/device-2018-09-08-152111.png" width="200">
+</td>
+</tr>
+</table>
+</div>
+
 ### boaring flutter : flutter 
 
 <div style="text-align: center"><table><tr>
@@ -143,20 +194,7 @@
 </td>
 </tr></table></div>
 
-### mcd_100_series : google code lab 
-<div style="text-align: center"><table><tr>
-<td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/mdc_100_series/device-2018-08-26-005340.png" width="200">
-</td>
-<td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/mdc_100_series/device-2018-08-26-005358.png" width="200">
-</td>
-<td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/mdc_100_series/device-2018-09-08-152111.png" width="200">
-</td>
-</tr>
-</table>
-</div>
+
 
 ### 플로팅 액션 버튼 & 네비게이션 드로우어
 
@@ -249,40 +287,8 @@
 </table>
 </div>
 
-### Flutter App Intro
-<div style="text-align: center">
-<table>
-<tr>
-<td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_app_intro/flutter_splash_part0/device-2018-10-02-095639.png" width="200">
-</td>
-<td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_app_intro/flutter_splash_part0/device-2018-10-02-093009.png" width="200">
-</td>
-<td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_app_intro/flutter_splash_part0/device-2018-10-02-091945.png" width="200">
-</td>
-</tr>
-</table>
-</div>
 
-### Flutter News Reader
 
-<div style="text-align: center">
-<table>
-<tr>
-<td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_reader_news/device-2018-10-09-120001.png" width="200">
-</td>
-<td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_reader_news/device-2018-10-09-161822.png" width="200">
-</td>
- <td style="text-align: center">
-<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_reader_news/device-2018-10-09-162709.png" width="200">
-</td>
-</tr>
-</table>
-</div>
 
 
 ### Flutter Sqlite
