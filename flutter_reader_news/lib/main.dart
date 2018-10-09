@@ -2,10 +2,11 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_reader_news/article_page.dart';
 import 'package:flutter_reader_news/model/model.dart';
 import 'package:http/http.dart' as http;
 
-String API_KEY = "your_api_key";
+String API_KEY = "your api key";
 
 Future<List<Source>> fetchNewsSource() async {
   final response =
@@ -64,7 +65,12 @@ class MyAppState extends State<MyApp> {
                       return new ListView(
                         children: sources
                             .map((source) => GestureDetector(
-                                  onTap: () {},
+                                  onTap: () {
+
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => ArticleScreen(source: source)));
+                                    
+                                    
+                                  },
                                   child: Card(
                                     elevation: 1.0,
                                     color: Colors.white,
