@@ -274,6 +274,12 @@
 <td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_reader_news/device-2018-10-09-120001.png" width="200">
 </td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_reader_news/device-2018-10-09-161822.png" width="200">
+</td>
+ <td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_reader_news/device-2018-10-09-162709.png" width="200">
+</td>
 </tr>
 </table>
 </div>
