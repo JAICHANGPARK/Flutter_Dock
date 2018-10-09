@@ -213,7 +213,6 @@
 </div>
 
 
-
 ### Flutter Data Table Control
 
 <div style="text-align: center">
@@ -262,6 +261,18 @@
 </td>
 <td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_app_intro/flutter_splash_part0/device-2018-10-02-091945.png" width="200">
+</td>
+</tr>
+</table>
+</div>
+
+### Flutter News Reader
+
+<div style="text-align: center">
+<table>
+<tr>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_reader_news/device-2018-10-09-120001.png" width="200">
 </td>
 </tr>
 </table>
