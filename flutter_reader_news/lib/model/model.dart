@@ -12,6 +12,20 @@
     public string country { get; set; }
     }
 
+
+    public class Articles
+    {
+    public Source source { get; set; }
+    public string author { get; set; }
+    public string title { get; set; }
+    public string description { get; set; }
+    public string url { get; set; }
+    public string urlToImage { get; set; }
+    public DateTime publishedAt { get; set; }
+    public string content { get; set; }
+    }
+
+
  **/
 
 class NewsAPI {
@@ -27,6 +41,23 @@ class NewsAPI {
             .map((source) => Source.fromJson(source))
             .toList());
   }
+}
+
+class Article {
+  final Source source;
+  final String author;
+  final String title;
+  final String description;
+  final String url;
+  final String urlToImage;
+//  final DateTime publishedAt;
+  final String publishedAt;
+  final String content;
+
+  Article({this.source, this.author, this.title, this.description, this.url,
+    this.urlToImage, this.publishedAt, this.content});
+
+
 }
 
 class Source {
