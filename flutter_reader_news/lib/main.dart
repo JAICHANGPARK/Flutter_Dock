@@ -66,10 +66,7 @@ class MyAppState extends State<MyApp> {
                         children: sources
                             .map((source) => GestureDetector(
                                   onTap: () {
-
                                     Navigator.push(context, MaterialPageRoute(builder: (context) => ArticleScreen(source: source)));
-                                    
-                                    
                                   },
                                   child: Card(
                                     elevation: 1.0,
