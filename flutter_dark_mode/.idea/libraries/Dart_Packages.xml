@@ -145,7 +145,7 @@
         <entry key="ios_settings_icons">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Roaming/Pub/Cache/git/flutter-test-30a1354ddbc658977d1ea6231643d26ccaff8200/t96_ios_settings_assets/lib" />
+              <option value="$USER_HOME$/AppData/Roaming/Pub/Cache/git/flutter-test-55e7394e042e9d47c22f84279f88f29952b6e3bf/t96_ios_settings_assets/lib" />
             </list>
           </value>
         </entry>
@@ -404,7 +404,7 @@
       </option>
     </properties>
     <CLASSES>
-      <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/git/flutter-test-30a1354ddbc658977d1ea6231643d26ccaff8200/t96_ios_settings_assets/lib" />
+      <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/git/flutter-test-55e7394e042e9d47c22f84279f88f29952b6e3bf/t96_ios_settings_assets/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/analyzer-0.32.4/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/args-1.5.0/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/async-2.0.8/lib" />
