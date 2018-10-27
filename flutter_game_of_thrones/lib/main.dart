@@ -20,6 +20,18 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<StatefulWidget> {
+
+  String url = "http://api.tvmaze.com/singlesearch/shows?q=game-of-thrones&embed=episodes";
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
