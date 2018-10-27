@@ -2,16 +2,14 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(new MyApp());
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
       home: HomePage(),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Colors.red
-      ),
+      theme: ThemeData(primaryColor: Colors.red),
     );
   }
 }
@@ -21,13 +19,30 @@ class HomePage extends StatefulWidget {
   State<StatefulWidget> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<StatefulWidget>{
+class _HomePageState extends State<StatefulWidget> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Game Of Thrones"),
       ),
+
+      body: myBody(),
+
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.refresh),
+      ),
     );
   }
+
+  Widget myBody() {
+
+    return Container(
+      color: Colors.green,
+    );
+
+  }
 }
+
