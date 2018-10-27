@@ -95,24 +95,59 @@ class _HomePageState extends State<StatefulWidget> {
   Widget myCard(){
     
     return Card(
-      child: Column(
-        
-        children: <Widget>[
-          
-          CircleAvatar(
-            radius: 100.0,
-            backgroundImage: NetworkImage(got.image.original),
-          ),
-          Text(
-            got.name
-          ),
-          Text(
-            got.runtime.toString()
-          ),
-          Text(
-            got.summary
-          )
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(18.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+
+            CircleAvatar(
+              radius: 100.0,
+              backgroundImage: NetworkImage(got.image.original),
+            ),
+            SizedBox(
+             height: 10.0,
+            ),
+            Text(
+              got.name,
+              style: TextStyle(
+                fontSize: 25.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.green
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Text(
+              "Runtime : ${got.runtime.toString()} minutes",
+              style: TextStyle(
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue
+              ),
+            ),
+            SizedBox(
+              height: 10.0,
+
+            ),
+            Text(
+              got.summary
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            RaisedButton(
+              color: Colors.red,
+              onPressed: (){
+
+              },
+              child: Text("All Episodes"),
+
+            )
+          ],
+        ),
       ),
     );
 
