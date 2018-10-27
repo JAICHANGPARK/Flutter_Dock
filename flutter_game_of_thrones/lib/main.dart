@@ -78,12 +78,44 @@ class _HomePageState extends State<StatefulWidget> {
 //      color: Colors.green,
 //    );
 
-  return got == null ? Center(
-    child: CircularProgressIndicator(),
-  )
-      : Container(
-    child: Text(" Data is arrived"),
-  );
+//  return got == null ? Center(
+//    child: CircularProgressIndicator(),
+//  )
+//      : Container(
+//    child: Text(" Data is arrived"),
+//  );
+//  }
+
+    return got == null ? Center(
+      child: CircularProgressIndicator(),
+    )
+        : myCard();
+  }
+
+  Widget myCard(){
+    
+    return Card(
+      child: Column(
+        
+        children: <Widget>[
+          
+          CircleAvatar(
+            radius: 100.0,
+            backgroundImage: NetworkImage(got.image.original),
+          ),
+          Text(
+            got.name
+          ),
+          Text(
+            got.runtime.toString()
+          ),
+          Text(
+            got.summary
+          )
+        ],
+      ),
+    );
+
   }
 
 
