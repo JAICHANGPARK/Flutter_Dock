@@ -56,7 +56,9 @@ class _HomePageState extends State<StatefulWidget> {
       ),
       body: myBody(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          fetchEpisodes();
+        },
         child: Icon(Icons.refresh),
       ),
     );
