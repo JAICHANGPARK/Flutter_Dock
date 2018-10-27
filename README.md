@@ -66,6 +66,9 @@
 <table>
 <tr>
 <td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_game_of_thrones/sreenshot/device-2018-10-27-232201.png" width="200">
+</td>
+<td style="text-align: center">
 <img src="https://github.com/JAICHANGPARK/Flutter_Dock/blob/master/flutter_game_of_thrones/sreenshot/device-2018-10-27-232827.png" width="200">
 </td>
 <td style="text-align: center">
