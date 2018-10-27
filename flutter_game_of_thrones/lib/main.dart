@@ -42,9 +42,11 @@ class _HomePageState extends State<StatefulWidget> {
 
     var res = await http.get(url);
     var decodeRes = jsonDecode(res.body);
-    responseBody = decodeRes;
     print(decodeRes);
     got = GOT.fromJson(decodeRes);
+    setState(() {
+//      responseBody = decodeRes;
+    });
   }
 
 
@@ -71,11 +73,17 @@ class _HomePageState extends State<StatefulWidget> {
 
   Widget myBody() {
 
-    return Container(
-      child: responseBody != null ? Text(responseBody) : Text("djflksfj"),
-      color: Colors.green,
-    );
+//    return Container(
+//      child: responseBody != null ? Text(responseBody) : Text("djflksfj"),
+//      color: Colors.green,
+//    );
 
+  return got == null ? Center(
+    child: CircularProgressIndicator(),
+  )
+      : Container(
+    child: Text(" Data is arrived"),
+  );
   }
 
 
