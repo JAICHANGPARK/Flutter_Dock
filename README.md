@@ -6,7 +6,8 @@
 
 ### Helper 
 1. [JSON to Dart](https://javiercbk.github.io/json_to_dart/)
-2. [jsonformatter](https://jsonformatter.curiousconcept.com/)
+2. [json2csharp](http://json2csharp.com/)
+3. [jsonformatter](https://jsonformatter.curiousconcept.com/)
 
 ## Test Device 
 1. Samsung Galaxy s8 Plus
