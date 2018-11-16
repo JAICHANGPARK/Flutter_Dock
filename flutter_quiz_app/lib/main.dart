@@ -70,10 +70,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: CircularProgressIndicator(),
               );
             case ConnectionState.done:
-              if(snapshot.hasError){
+              if (snapshot.hasError) {
                 return Container();
               }
-              return Container(child: Text("Data arrtived"),);
+//              return Container(child: Text("Data arrtived"),);
+              return questionList();
           }
           return null;
         },
@@ -83,6 +84,91 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+
+  ListView questionList() {
+    return ListView.builder(
+      itemCount: results.length,
+      itemBuilder: (context, index) => Card(
+            color: Colors.white,
+            elevation: 0.0,
+            child: ExpansionTile(
+              title: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    results[index].question,
+                    style:
+                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  ),
+                  FittedBox(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        FilterChip(
+                            backgroundColor: Colors.grey[100],
+                            label: Text(results[index].category),
+                            onSelected: (b) {}),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        FilterChip(
+                            backgroundColor: Colors.grey[100],
+                            label: Text(results[index].difficulty),
+                            onSelected: (b) {})
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              leading: CircleAvatar(
+                backgroundColor: Colors.grey[100],
+                child: Text(results[index].type.startsWith("m") ? "M" : "B"),
+              ),
+              children: results[index].incorrectAnswers.map((m) {
+                return AnswerWidget(results, index, m);
+              }).toList(),
+            ),
+          ),
+    );
+  }
+}
+
+class AnswerWidget extends StatefulWidget {
+  final List<Results> _results;
+  final int index;
+  final String m;
+
+  AnswerWidget(this._results, this.index, this.m);
+
+  @override
+  State<StatefulWidget> createState() => _AnswerWidgetState();
+}
+
+class _AnswerWidgetState extends State<AnswerWidget> {
+  Color c = Colors.black;
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return ListTile(
+      onTap: () {
+        setState(() {
+          if (widget.m == widget._results[widget.index].correctAnswer) {
+            c = Colors.green;
+          } else {
+            c = Colors.red;
+          }
+        });
+      },
+      title: Text(
+
+        widget.m,
+        textAlign: TextAlign.center,
+        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+      ),
     );
   }
 }
