@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_quiz_app/model/quiz.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+import 'dart:async';
 
 void main() => runApp(MyApp());
 
@@ -9,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.white,
+        primaryColor: Colors.white,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
       debugShowCheckedModeBanner: false,
@@ -29,6 +33,18 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  Quiz quiz;
+  List<Results> results;
+
+  Future<void> fecthQuestions() async {
+    var res = await http.get("https://opentdb.com/api.php?amount=20");
+    var decRes = jsonDecode(res.body);
+    print(decRes);
+
+    quiz = Quiz.fromJson(decRes);
+    results = quiz.results;
+  }
+
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -42,19 +58,25 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("Quiz App"),
         elevation: 0.0,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
-        ),
+      body: FutureBuilder(
+        future: fecthQuestions(),
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          switch (snapshot.connectionState) {
+            case ConnectionState.none:
+              return Text("Press button to start");
+            case ConnectionState.active:
+            case ConnectionState.waiting:
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            case ConnectionState.done:
+              if(snapshot.hasError){
+                return Container();
+              }
+              return Container(child: Text("Data arrtived"),);
+          }
+          return null;
+        },
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
