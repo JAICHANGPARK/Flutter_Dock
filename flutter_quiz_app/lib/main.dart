@@ -58,32 +58,57 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("Quiz App"),
         elevation: 0.0,
       ),
-      body: FutureBuilder(
-        future: fecthQuestions(),
-        builder: (BuildContext context, AsyncSnapshot snapshot) {
-          switch (snapshot.connectionState) {
-            case ConnectionState.none:
-              return Text("Press button to start");
-            case ConnectionState.active:
-            case ConnectionState.waiting:
-              return Center(
-                child: CircularProgressIndicator(),
-              );
-            case ConnectionState.done:
-              if (snapshot.hasError) {
-                return Container();
-              }
+      body: RefreshIndicator(
+        onRefresh: fecthQuestions,
+        child: FutureBuilder(
+          future: fecthQuestions(),
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            switch (snapshot.connectionState) {
+              case ConnectionState.none:
+                return Text("Press button to start");
+              case ConnectionState.active:
+              case ConnectionState.waiting:
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              case ConnectionState.done:
+                if (snapshot.hasError) {
+                  return errorData(snapshot);
+                }
 //              return Container(child: Text("Data arrtived"),);
-              return questionList();
-          }
-          return null;
-        },
+                return questionList();
+            }
+            return null;
+          },
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: Icon(Icons.refresh),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+  
+  Padding errorData(AsyncSnapshot snapshot){
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text("Error : ${snapshot.error}"),
+          SizedBox(height: 20.0,),
+          RaisedButton(
+            onPressed: (){
+              fecthQuestions();
+              setState(() {
+
+              });
+            },
+            child: Text("Try Again"),
+          )
+        ],
+      ),
     );
   }
 
@@ -93,43 +118,50 @@ class _MyHomePageState extends State<MyHomePage> {
       itemBuilder: (context, index) => Card(
             color: Colors.white,
             elevation: 0.0,
-            child: ExpansionTile(
-              title: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    results[index].question,
-                    style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-                  ),
-                  FittedBox(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        FilterChip(
-                            backgroundColor: Colors.grey[100],
-                            label: Text(results[index].category),
-                            onSelected: (b) {}),
-                        SizedBox(
-                          width: 10.0,
-                        ),
-                        FilterChip(
-                            backgroundColor: Colors.grey[100],
-                            label: Text(results[index].difficulty),
-                            onSelected: (b) {})
-                      ],
+            child: Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: ExpansionTile(
+                title: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      results[index].question,
+                      style:
+                          TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
                     ),
-                  )
-                ],
+                    FittedBox(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          FilterChip(
+                              backgroundColor: Colors.grey[100],
+                              label: Text(results[index].category),
+                              onSelected: (b) {}),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          FilterChip(
+                              backgroundColor: Colors.grey[100],
+                              label: Text(results[index].difficulty),
+                              onSelected: (b) {})
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+
+                leading: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    backgroundColor: Colors.grey[100],
+                    child: Text(results[index].type.startsWith("m") ? "M" : "B"),
+                  ),
+                ),
+                children: results[index].incorrectAnswers.map((m) {
+                  return AnswerWidget(results, index, m);
+                }).toList(),
               ),
-              leading: CircleAvatar(
-                backgroundColor: Colors.grey[100],
-                child: Text(results[index].type.startsWith("m") ? "M" : "B"),
-              ),
-              children: results[index].incorrectAnswers.map((m) {
-                return AnswerWidget(results, index, m);
-              }).toList(),
             ),
           ),
     );
@@ -164,10 +196,11 @@ class _AnswerWidgetState extends State<AnswerWidget> {
         });
       },
       title: Text(
-
         widget.m,
         textAlign: TextAlign.center,
-        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        style: TextStyle(
+            color: c,
+            fontWeight: FontWeight.bold),
       ),
     );
   }
