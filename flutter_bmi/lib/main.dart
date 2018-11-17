@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bmi/widgets/gender_card.dart';
+import 'package:flutter_bmi/widgets/gender/gender_card.dart';
 import 'utils/widget_utils.dart' show screenAwareSize;
 
 void main() {
