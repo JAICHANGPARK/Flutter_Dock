@@ -7,12 +7,12 @@ import 'dart:math' as math;
 
 import 'package:flutter_svg/flutter_svg.dart';
 
-const double _defaultGenderAngle = math.pi /4;
+const double _defaultGenderAngle = math.pi / 4;
 
 const Map<Gender, double> _genderAngles = {
-  Gender.female : - _defaultGenderAngle,
-  Gender.other : 0.0,
-  Gender.male : _defaultGenderAngle
+  Gender.female: -_defaultGenderAngle,
+  Gender.other: 0.0,
+  Gender.male: _defaultGenderAngle
 };
 
 class GenderIconTranslated extends StatelessWidget {
@@ -23,8 +23,11 @@ class GenderIconTranslated extends StatelessWidget {
   };
 
   final Gender gender;
+
   const GenderIconTranslated({Key key, this.gender}) : super(key: key);
+
   bool get _isOtherGender => gender == Gender.other;
+
   String get _assetName => _genderImages[gender];
 
   double _iconSize(BuildContext context) {
@@ -77,6 +80,34 @@ class GenderIconTranslated extends StatelessWidget {
   }
 }
 
+class GenderArrow extends StatelessWidget {
+  final double angle;
+
+  const GenderArrow({Key key, this.angle}) : super(key: key);
+
+  double _arrowLength(BuildContext context) => screenAwareSize(32.0, context);
+
+  double _translationOffset(BuildContext context) =>
+      _arrowLength(context) * -0.4;
+
+  @override
+  Widget build(BuildContext context) {
+    return Transform.rotate(
+      angle: angle,
+      child: Transform.translate(
+        offset: Offset(0.0, _translationOffset(context)),
+        child: Transform.rotate(
+          angle: -_defaultGenderAngle,
+          child: SvgPicture.asset(
+            "images/gender_arrow.svg",
+            height: _arrowLength(context),
+            width: _arrowLength(context),
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class GenderCard extends StatefulWidget {
   final Gender initGender;
@@ -105,7 +136,10 @@ class _GenderCardState extends State<GenderCard> {
               Padding(
                 padding: EdgeInsets.only(top: screenAwareSize(16.0, context)),
                 child: _drawMainStack(),
-              )
+              ),
+
+//              GenderCircle(),
+//              GenderArrow(angle: _genderAngles[Gender.female]),
             ],
           ),
         ),
@@ -113,11 +147,16 @@ class _GenderCardState extends State<GenderCard> {
     );
   }
 
+
+
   Widget _drawMainStack() {
     return Stack(
       alignment: Alignment.bottomCenter,
       children: <Widget>[
         _drawCircleIndicator(),
+        GenderIconTranslated(gender: Gender.female),
+        GenderIconTranslated(gender: Gender.other),
+        GenderIconTranslated(gender: Gender.male),
       ],
     );
   }
@@ -127,6 +166,7 @@ class _GenderCardState extends State<GenderCard> {
       alignment: Alignment.center,
       children: <Widget>[
         GenderCircle(),
+        GenderArrow(angle: _genderAngles[Gender.female],)
       ],
     );
   }
@@ -136,15 +176,12 @@ class GenderCircle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
       width: _circleSize(context),
       height: _circleSize(context),
-      
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: Color.fromRGBO(244, 244, 244, 1.0),
       ),
-      
     );
   }
 }
@@ -165,4 +202,3 @@ class GenderLine extends StatelessWidget {
     );
   }
 }
-
