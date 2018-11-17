@@ -1,26 +1,104 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'utils/widget_utils.dart' show screenAwareSize;
 
-void main() => runApp(MyApp());
+void main() {
+  SystemChrome.setPreferredOrientations(
+          [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
+      .then((_) => runApp(new MyApp()));
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: InputPage(),
+    );
+  }
+}
+
+class InputPage extends StatelessWidget {
+
+  Widget _tempCard(String label){
+    return Card(
+      child: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Text(label),
+      ),
+    );
+  }
+
+  Widget _buildTitle(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 24.0, top: screenAwareSize(56.0, context)),
+      child: Text(
+        "BMI Calculator",
+        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28.0),
+      ),
+    );
+  }
+
+  Widget _buildBottom(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      height: screenAwareSize(108.0, context),
+      width: double.infinity,
+      child: Switch(value: true, onChanged: (val) {}),
+    );
+  }
+
+
+
+  Widget _buildCard(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(
+          left: 14.0, right: 14.0, top: screenAwareSize(32.0, context)),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: Column(
+              children: <Widget>[
+                Expanded(
+                  child: _tempCard("Gender"),
+                ),
+                Expanded(
+                  child: _tempCard("Weight"),
+                )
+              ],
+            ),
+          ),
+
+          Expanded(
+            child: _tempCard("Height"),
+          )
+        ],
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: MediaQuery.of(context).padding,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            _buildTitle(context),
+            Expanded(
+              child: _buildCard(context),
+            ),
+            _buildBottom(context)
+          ],
+        ),
+      ),
     );
   }
 }
