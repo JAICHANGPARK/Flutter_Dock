@@ -80,34 +80,43 @@ class GenderIconTranslated extends StatelessWidget {
   }
 }
 
-class GenderArrow extends StatelessWidget {
-  final double angle;
 
-  const GenderArrow({Key key, this.angle}) : super(key: key);
-
-  double _arrowLength(BuildContext context) => screenAwareSize(32.0, context);
-
-  double _translationOffset(BuildContext context) =>
-      _arrowLength(context) * -0.4;
-
+class GenderArrow extends AnimatedWidget{
   @override
   Widget build(BuildContext context) {
-    return Transform.rotate(
-      angle: angle,
-      child: Transform.translate(
-        offset: Offset(0.0, _translationOffset(context)),
-        child: Transform.rotate(
-          angle: -_defaultGenderAngle,
-          child: SvgPicture.asset(
-            "images/gender_arrow.svg",
-            height: _arrowLength(context),
-            width: _arrowLength(context),
-          ),
-        ),
-      ),
-    );
+    // TODO: implement build
+    return null;
   }
+
 }
+//class GenderArrow extends StatelessWidget {
+//  final double angle;
+//
+//  const GenderArrow({Key key, this.angle}) : super(key: key);
+//
+//  double _arrowLength(BuildContext context) => screenAwareSize(32.0, context);
+//
+//  double _translationOffset(BuildContext context) =>
+//      _arrowLength(context) * -0.4;
+//
+//  @override
+//  Widget build(BuildContext context) {
+//    return Transform.rotate(
+//      angle: angle,
+//      child: Transform.translate(
+//        offset: Offset(0.0, _translationOffset(context)),
+//        child: Transform.rotate(
+//          angle: -_defaultGenderAngle,
+//          child: SvgPicture.asset(
+//            "images/gender_arrow.svg",
+//            height: _arrowLength(context),
+//            width: _arrowLength(context),
+//          ),
+//        ),
+//      ),
+//    );
+//  }
+//}
 
 class GenderCard extends StatefulWidget {
   final Gender initGender;
@@ -190,6 +199,7 @@ class _GenderCardState extends State<GenderCard>
         GenderCircle(),
         GenderArrow(
           angle: _genderAngles[Gender.female],
+
         )
       ],
     );
