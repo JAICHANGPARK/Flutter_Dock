@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bmi/model/gender.dart';
 import 'package:flutter_bmi/widgets/gender/gender_card.dart';
 import 'utils/widget_utils.dart' show screenAwareSize;
 
 void main() {
+
+  SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: Colors.white, //top bar color
+        statusBarIconBrightness: Brightness.dark, //top bar icons
+        systemNavigationBarColor: Colors.white, //bottom bar color
+        systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
+      )
+  );
+
   SystemChrome.setPreferredOrientations(
-          [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
       .then((_) => runApp(new MyApp()));
 }
 
@@ -19,10 +30,106 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: InputPage(),
+      home: InputPages(),
     );
   }
 }
+
+class InputPages extends StatefulWidget {
+  @override
+  InputPageState createState() {
+    return new InputPageState();
+  }
+}
+
+class InputPageState extends State<InputPages> with TickerProviderStateMixin {
+  AnimationController _submitAnimationController;
+  Gender gender = Gender.other;
+
+  Widget _tempCard(String label){
+    return Card(
+      child: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Text(label),
+      ),
+    );
+  }
+
+  Widget _buildTitle(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 24.0, top: screenAwareSize(56.0, context)),
+      child: Text(
+        "BMI Calculator",
+        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28.0),
+      ),
+    );
+  }
+
+  Widget _buildBottom(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      height: screenAwareSize(108.0, context),
+      width: double.infinity,
+      child: Switch(value: true, onChanged: (val) {}),
+    );
+  }
+
+
+
+  Widget _buildCard(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(
+          left: 14.0, right: 14.0, top: screenAwareSize(32.0, context)),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: Column(
+              children: <Widget>[
+                Expanded(
+                  child: GenderCard(
+                    gender: gender,
+                    onChanged: (val) => setState(() => gender = val),
+                  ),
+                ),
+                Expanded(
+                  child: _tempCard("Weight"),
+                )
+              ],
+            ),
+          ),
+
+          Expanded(
+            child: _tempCard("Height"),
+          )
+        ],
+      ),
+    );
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return  Scaffold(
+      body: Padding(
+        padding: MediaQuery.of(context).padding,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            _buildTitle(context),
+            Expanded(
+              child: _buildCard(context),
+            ),
+            _buildBottom(context)
+          ],
+        ),
+      ),
+    );;
+  }
+
+}
+
 
 class InputPage extends StatelessWidget {
 

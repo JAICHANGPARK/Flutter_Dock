@@ -21,8 +21,7 @@ class GenderCard extends StatefulWidget {
   _GenderCardState createState() => _GenderCardState();
 }
 
-class _GenderCardState extends State<GenderCard>
-    with SingleTickerProviderStateMixin {
+class _GenderCardState extends State<GenderCard> with SingleTickerProviderStateMixin {
   AnimationController _arrowAnimationController;
 
   @override
@@ -125,12 +124,9 @@ class TapHandler extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
-        Expanded(
-            child: GestureDetector(onTap: () => onGenderTapped(Gender.female))),
-        Expanded(
-            child: GestureDetector(onTap: () => onGenderTapped(Gender.other))),
-        Expanded(
-            child: GestureDetector(onTap: () => onGenderTapped(Gender.male))),
+        Expanded(child: GestureDetector(onTap: () => onGenderTapped(Gender.female))),
+        Expanded(child: GestureDetector(onTap: () => onGenderTapped(Gender.other))),
+        Expanded(child: GestureDetector(onTap: () => onGenderTapped(Gender.male))),
       ],
     );
   }

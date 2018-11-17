@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bmi/model/gender.dart';
-import 'package:flutter_bmi/utils/widget_utils.dart';
+import 'package:flutter_bmi/utils/widget_utils.dart' show screenAwareSize;
 import 'package:flutter_bmi/widgets/gender/gender_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

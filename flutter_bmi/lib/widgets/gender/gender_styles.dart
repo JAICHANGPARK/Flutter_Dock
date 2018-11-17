@@ -2,7 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bmi/model/gender.dart';
-import 'package:flutter_bmi/utils/widget_utils.dart';
+import 'package:flutter_bmi/utils/widget_utils.dart' show screenAwareSize;
 
 const double defaultGenderAngle = math.pi / 4;
 const Map<Gender, double> genderAngles = {
