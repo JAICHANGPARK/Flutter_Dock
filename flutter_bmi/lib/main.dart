@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bmi/widgets/gender_card.dart';
 import 'utils/widget_utils.dart' show screenAwareSize;
 
 void main() {
@@ -66,7 +67,7 @@ class InputPage extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Expanded(
-                  child: _tempCard("Gender"),
+                  child: GenderCard(),
                 ),
                 Expanded(
                   child: _tempCard("Weight"),
