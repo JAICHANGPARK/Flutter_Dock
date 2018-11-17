@@ -82,11 +82,15 @@ class GenderIconTranslated extends StatelessWidget {
 
 
 class GenderArrow extends AnimatedWidget{
+  const GenderArrow({Key key, Listenable listenable}) : super(key: key, listenable: listenable);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return null;
+    Animation animation = listenable;
+    return Transform.rotate(angle: animation.value);
   }
+
 
 }
 //class GenderArrow extends StatelessWidget {
@@ -198,7 +202,8 @@ class _GenderCardState extends State<GenderCard>
       children: <Widget>[
         GenderCircle(),
         GenderArrow(
-          angle: _genderAngles[Gender.female],
+//          angle: _genderAngles[Gender.female],
+        listenable: _arrowAnimationController,
 
         )
       ],
