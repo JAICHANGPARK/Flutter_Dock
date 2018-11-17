@@ -120,7 +120,30 @@ class GenderCard extends StatefulWidget {
 
 double _circleSize(BuildContext context) => screenAwareSize(80.0, context);
 
-class _GenderCardState extends State<GenderCard> {
+class _GenderCardState extends State<GenderCard>
+    with SingleTickerProviderStateMixin {
+  AnimationController _arrowAnimationController; //<--- Add controller
+  Gender selectedGender;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    selectedGender = widget.initGender ?? Gender.other;
+
+    _arrowAnimationController = new AnimationController(vsync: this,
+    lowerBound: -_defaultGenderAngle,
+    upperBound: _defaultGenderAngle,
+    value: _genderAngles[selectedGender]);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _arrowAnimationController.dispose(); //<--- dispose controller when we're done
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -147,8 +170,6 @@ class _GenderCardState extends State<GenderCard> {
     );
   }
 
-
-
   Widget _drawMainStack() {
     return Stack(
       alignment: Alignment.bottomCenter,
@@ -157,6 +178,7 @@ class _GenderCardState extends State<GenderCard> {
         GenderIconTranslated(gender: Gender.female),
         GenderIconTranslated(gender: Gender.other),
         GenderIconTranslated(gender: Gender.male),
+        _drawGestureDetector(), //<--- Add gesutre detecto
       ],
     );
   }
@@ -166,8 +188,18 @@ class _GenderCardState extends State<GenderCard> {
       alignment: Alignment.center,
       children: <Widget>[
         GenderCircle(),
-        GenderArrow(angle: _genderAngles[Gender.female],)
+        GenderArrow(
+          angle: _genderAngles[Gender.female],
+        )
       ],
+    );
+  }
+
+  _drawGestureDetector() {
+    return Positioned.fill(
+      child: TapHandler(
+        onGenderTapped: (gender) => setState(() => selectedGender = gender),
+      ),
     );
   }
 }
@@ -199,6 +231,27 @@ class GenderLine extends StatelessWidget {
         width: 1.0,
         color: Color.fromRGBO(216, 217, 223, 0.54),
       ),
+    );
+  }
+}
+
+class TapHandler extends StatelessWidget {
+  final Function(Gender) onGenderTapped;
+
+  const TapHandler({Key key, this.onGenderTapped}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      children: <Widget>[
+        Expanded(
+            child: GestureDetector(onTap: () => onGenderTapped(Gender.female))),
+        Expanded(
+            child: GestureDetector(onTap: () => onGenderTapped(Gender.other))),
+        Expanded(
+            child: GestureDetector(onTap: () => onGenderTapped(Gender.male))),
+      ],
     );
   }
 }
