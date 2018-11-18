@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bmi/utils/widget_utils.dart' show screenAwareSize;
 import 'package:flutter_bmi/widgets/card_title.dart';
+import 'package:flutter_bmi/widgets/weight/weight_slider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class WeightCard extends StatefulWidget {
@@ -41,14 +42,20 @@ class _WeightCardState extends State<WeightCard> {
   }
 
   Widget _drawSlider() {
-    return WeightBackgroud();
+    return WeightBackground(
+      child: LayoutBuilder(builder: (context, constraints) => WeightSlider(
+        maxValue: 130,
+        minValue: 30,
+        width: constraints.maxHeight,
+      )),
+    );
   }
 }
 
-class WeightBackgroud extends StatelessWidget {
+class WeightBackground extends StatelessWidget {
   final Widget child;
 
-  const WeightBackgroud({Key key, this.child}) : super(key: key);
+  const WeightBackground({Key key, this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
