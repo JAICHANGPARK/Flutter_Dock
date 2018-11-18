@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bmi/model/gender.dart';
 import 'package:flutter_bmi/widgets/gender/gender_card.dart';
+import 'package:flutter_bmi/widgets/weight/weight_card.dart';
 import 'utils/widget_utils.dart' show screenAwareSize;
 
 void main() {
@@ -92,9 +93,12 @@ class InputPageState extends State<InputPages> with TickerProviderStateMixin {
                     onChanged: (val) => setState(() => gender = val),
                   ),
                 ),
-                Expanded(
-                  child: _tempCard("Weight"),
-                )
+//                Expanded(
+//                  child: _tempCard("Weight"),
+//                )
+              Expanded(
+                child: WeightCard(),
+              )
               ],
             ),
           ),
