@@ -15,7 +15,6 @@
 ### Test Device 
 1. Samsung Galaxy s8 Plus
 
-
 # Contain
 
 ### Instagram
@@ -390,6 +389,16 @@
 comming soon
 
 ### flutter timer : egg timer 
+
+
+# Others
+
+Visit my flutter project 
+
+## Animation
+
+1. [Flutter Animation](https://github.com/JAICHANGPARK/Flutter_animation)
+
 
 
 
