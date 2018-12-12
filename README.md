@@ -398,7 +398,9 @@ Visit my flutter project
 ## Animation
 
 1. [Flutter Animation](https://github.com/JAICHANGPARK/Flutter_animation)
-
+2. [lutter_flare101](https://github.com/JAICHANGPARK/flutter_flare101)
+3. [flutter_animation_102](https://github.com/JAICHANGPARK/flutter_animation_102)
+1. [flutter_animation_103](https://github.com/JAICHANGPARK/flutter_animation_103)
 
 
 
