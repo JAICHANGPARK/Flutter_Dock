@@ -79,7 +79,8 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Colors.teal,
             textColor: Colors.white,
             onPressed: () {
-              infoDialog(context, allReviews[0].data);
+              //infoDialog(context, allReviews[0].data);
+              showReview(context, allReviews[0].data);
             },
           )
         ],
@@ -109,7 +110,25 @@ Future<bool> infoDialog(context, review) {
               },
             )
           ],
-        )
+        );
       }
   );
+}
+
+Future<bool> showReview(context, review){
+  return showDialog(context: context, barrierDismissible: true, builder: (BuildContext context){
+    return Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+      child: Container(
+        height: 350.0,
+        width: 200.0,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        child: Column(
+
+        ),
+      ),
+    );
+  });
 }
