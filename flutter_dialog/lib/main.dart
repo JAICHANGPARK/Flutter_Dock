@@ -41,15 +41,15 @@ class _MyHomePageState extends State<MyHomePage> {
     // TODO: implement initState
     super.initState();
 
-    ReviewService().getAllReviews().then((QuerySnapshot docs){
+    ReviewService().getAllReviews().then((QuerySnapshot docs) {
       allReviews = [];
       setState(() {
         allReviews = docs.documents;
         reviewsLoaded = true;
       });
     });
-
   }
+
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -68,7 +68,9 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Center(
-            child: reviewsLoaded ? Text(allReviews[0].data['reviewMade']) : Container(),
+            child: reviewsLoaded
+                ? Text(allReviews[0].data['reviewMade'])
+                : Container(),
 
           ),
           RaisedButton(
@@ -76,8 +78,8 @@ class _MyHomePageState extends State<MyHomePage> {
             elevation: 4.0,
             color: Colors.teal,
             textColor: Colors.white,
-            onPressed: (){
-
+            onPressed: () {
+              infoDialog(context, allReviews[0].data);
             },
           )
         ],
@@ -89,4 +91,25 @@ class _MyHomePageState extends State<MyHomePage> {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+Future<bool> infoDialog(context, review) {
+  return showDialog(
+      context: context,
+      barrierDismissible: true,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Review'),
+          content: Text(review['reviewMade']),
+          actions: <Widget>[
+            FlatButton(
+              child: Text("OK"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            )
+          ],
+        )
+      }
+  );
 }
