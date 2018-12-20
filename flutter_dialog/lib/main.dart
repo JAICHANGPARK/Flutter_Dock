@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dialog/review_service.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,7 +11,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
@@ -20,8 +21,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
-
-
   final String title;
 
   @override
@@ -29,37 +28,59 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  List allReviews = [];
+
+  bool reviewsLoaded = false;
+
+
   int _counter = 0;
 
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    ReviewService().getAllReviews().then((QuerySnapshot docs){
+      allReviews = [];
+      setState(() {
+        allReviews = docs.documents;
+        reviewsLoaded = true;
+      });
+    });
+
+  }
   void _incrementCounter() {
     setState(() {
-
       _counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-
         title: Text(widget.title),
+        backgroundColor: Colors.teal,
+        centerTitle: true,
       ),
-      body: Center(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Center(
+            child: reviewsLoaded ? Text(allReviews[0].data['reviewMade']) : Container(),
 
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
-        ),
+          ),
+          RaisedButton(
+            child: Text("Show more"),
+            elevation: 4.0,
+            color: Colors.teal,
+            textColor: Colors.white,
+            onPressed: (){
+
+            },
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
