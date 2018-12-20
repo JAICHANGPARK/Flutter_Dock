@@ -177,6 +177,7 @@ Future<bool> showReview(context, review) {
                   onPressed: (){
                     Navigator.of(context).pop();
                   },
+                  color: Colors.transparent,
                 )
               ],
             ),
